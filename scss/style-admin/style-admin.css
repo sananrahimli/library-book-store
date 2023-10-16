@@ -1,0 +1,105 @@
+@import url(../fonts/icon_style.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: 0;
+  z-index: 1;
+}
+
+body {
+  background-color: #720418;
+  display: flex;
+  flex-direction: column;
+}
+body header .logo {
+  width: 282.59px;
+  height: 85.04px;
+  margin-top: 74.96px;
+  margin-left: 32px;
+  border: 1px;
+}
+body header .logo a img {
+  max-height: 100%;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #admin_join {
+  margin-top: 90px;
+  background-color: rgb(255, 255, 255);
+}
+body main #admin_join h1 {
+  font-family: Montserrat;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+body main #admin_join form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main #admin_join form input {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 20px 50px 20px 50px;
+  border-radius: 3px;
+  font-family: Crimson Text;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+body main #admin_join form button {
+  width: 500px;
+  padding: 20px;
+  border: 1px solid black;
+  margin: 20px 50px 20px 50px;
+  border-radius: 3px;
+  font-family: Crimson Text;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #E16A00;
+  color: white;
+}
+body main #admin_join form .error_css {
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e6c5e5;
+  border-radius: 10px;
+  font-family: Crimson Text;
+  font-size: 19px;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+body main #admin_join form .great_css {
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #b4f89f;
+  border-radius: 10px;
+  font-family: Crimson Text;
+  font-size: 19px;
+  line-height: 25px;
+  letter-spacing: 0em;
+}/*# sourceMappingURL=style-admin.css.map */
