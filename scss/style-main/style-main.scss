@@ -1,0 +1,81 @@
+@import '../style-all.scss';
+
+// Ana seyfesinin scss
+
+section#blockTop {
+    padding-top: 5rem;
+    .flex {
+        height: 580px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .blockTop__content {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        
+        h1 {
+            font-weight: 900;
+            font-size: 2.1rem;
+        }
+        p.description {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 2;
+        }
+        a {
+            background-color: $col2;
+            display: block;
+            font-weight: 900;
+            color: #fff;
+            font-size: 15px;
+            padding: 11px 24px;
+        }
+    }
+    .blockTop__books {
+        background-image: url(../../images/home/bg_book.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        max-width: 632px;
+        .book {
+            height: 314px;
+            width: 250px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-55%);
+            transition: all 1s;
+            left: -55px;
+            opacity: 0;
+            &.book_1 {
+                background-image: url(../../images/home/book_1.svg);
+            }
+            &.book_2 {
+                background-image: url(../../images/home/book_2.svg);
+            }
+            &.book_3 {
+                background-image: url(../../images/home/book_3.svg);
+            }
+        }
+        &.active {
+            .book_1 {
+                left: -50px;
+                opacity: 1;
+            }
+            .book_2 {
+                left: 120px;
+                opacity: 1;
+            }
+            .book_3 {
+                left: 270px;
+                opacity: 1;
+            }
+        }
+    }
+}
