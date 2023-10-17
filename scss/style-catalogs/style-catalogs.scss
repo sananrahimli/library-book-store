@@ -1,3 +1,1253 @@
 @import '../style-all.scss';
 
+
 // Catalogs seyfesinin scss
+$background: #FFFAF5;
+$text: #241400;
+$btn: #E16A00;
+
+body {
+    background-color: $background;
+    width: 1600px;
+    height: 2534px;
+
+
+    .wrapper {
+        width: 1272px;
+        height: 431px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10em;
+        margin: 196px 130px;
+        background-color: $background;
+        position: relative;
+
+        .all-bks {
+
+            width: 100%;
+            height: 30em;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+
+            .nav-all-books {
+                background-color: $background;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                h2 {
+                    color: $text;
+                    font-family: Montserrat;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 196.187%;
+                    margin-left: 2.5em;
+                }
+
+                ul {
+                    display: inline-flex;
+                    flex-direction: row;
+                    margin-right: 27em;
+                    justify-content: center;
+                    column-gap: 4em;
+                    height: 26px;
+                    align-items: flex-start;
+                    gap: 40px;
+                    flex-shrink: 0;
+                    
+
+
+                    li {
+                        color: $text;
+                        font-family: Montserrat;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+
+                        a {
+                            color: $text;
+                        }
+                        a::before  {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -1px;
+                            width: 0;
+                            height: 1px;
+                            background-color: #E16A00;
+                            transition: all 0.8s;
+                          }
+                        
+                       
+                         a:hover::before {
+                            width: 100%;
+                          }
+                    }
+                }
+
+            }
+
+            .all-books {
+                width: 100%;
+                height: 45vh;
+                margin-top: 3vh;
+                display: flex;
+                flex-direction: row;
+                column-gap: 1.5em;
+
+                .target-book {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target-book1 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target-book2 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target-book3 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target-book4 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+            }
+        }
+
+
+
+        .bstsllr {
+            width: 100%;
+            height: 30em;
+            margin-top: 3vh;
+            display: flex;
+            flex-direction: column;
+            column-gap: 1.5em;
+            background-color: $background;
+
+            .bestseller-title {
+                width: 100%;
+                height: 8vh;
+                display: flex;
+                justify-content: center;
+
+
+                h2 {
+                    color: $text;
+                    font-family: Montserrat;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 196.187%;
+                }
+            }
+
+            .bestseller-books {
+
+                width: 100%;
+                height: 45vh;
+                margin-top: 3vh;
+                display: flex;
+                flex-direction: row;
+                column-gap: 1.5em;
+
+                .target1-book {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target1-book1 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target2-book2 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target3-book3 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .target4-book4 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+            }
+
+        }
+
+        .nw-rlase {
+
+            width: 100%;
+            height: 30em;
+            margin-top: 3vh;
+            display: flex;
+            flex-direction: column;
+            column-gap: 1.5em;
+            background-color: $background;
+
+            .relase-title {
+                width: 100%;
+                height: 8vh;
+                display: flex;
+                justify-content: center;
+
+
+                h2 {
+                    color: $text;
+                    font-family: Montserrat;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 196.187%;
+                }
+            }
+
+            .relase-books {
+
+                width: 100%;
+                height: 45vh;
+                margin-top: 3vh;
+                display: flex;
+                flex-direction: row;
+                column-gap: 1.5em;
+
+                .relase-book1 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .relase-book2 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .relase-book3 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .relase-book4 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+
+                .relase-book5 {
+                    width: 184px;
+                    height: 332px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1.3em;
+                    background: #FFF;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                    margin-left: 2em;
+
+                    img {
+                        width: 134.229px;
+                        height: 190px;
+                        flex-shrink: 0;
+                    }
+
+                    .title {
+                        display: flex;
+                        width: 113px;
+                        height: 18px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        p {
+                            display: flex;
+                            width: 113px;
+                            height: 18px;
+                            flex-direction: column;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            color: var(--, #241400);
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 196.187%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        width: 136.233px;
+                        height: 9px;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        color: var(--, #241400);
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 196.187%;
+                    }
+
+                    .btn {
+                        width: 136px;
+                        height: 29px;
+                        flex-shrink: 0;
+                        border-radius: 3px;
+                        border: 1px solid $btn;
+                        background: $btn;
+                        box-shadow: 0px 3px 8px 0px rgba(225, 106, 0, 0.19);
+                        color: $background;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .follow {
+        width: 353px;
+        height: 151px;
+        flex-shrink: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            color: $text;
+            font-family: Montserrat;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 196.187%;
+        }
+
+        .link {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 70%;
+
+            img {
+                width: 78px;
+                height: 78px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}
