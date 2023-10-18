@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/header&footer/logo.css" />
+    <link rel="stylesheet" href="/sidebar/sidebar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/admin-panel/admin-panel.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geo&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Admin Panel</title>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="sidebar">
+        <div class="library-logo">
+          <div class="logo">
+            <img src="/Admin-sign-in/logo.svg" alt="Library" />
+          </div>
+          <div class="logo-side">
+            <h3 class="library">
+              Library
+              <hr />
+            </h3>
+            <p class="admin">Admin Panel</p>
+          </div>
+        </div>
+        <div class="menu-slider">
+          <div class="section">
+            <div class="logos">
+              <img src="/Admin-sign-in/logo.svg" alt="Library" />
+            </div>
+            <a class="link" href="#">Home</a>
+          </div>
+          <div class="section">
+            <div class="logos">
+              <img src="/Admin-sign-in/logo.svg" alt="Library" />
+            </div>
+            <a class="link" href="#">Books</a>
+          </div>
+          <div class="section">
+            <div class="logos">
+              <img src="/Admin-sign-in/logo.svg" alt="Library" />
+            </div>
+            <a class="link" href="#">About</a>
+          </div>
+          <div class="section">
+            <div class="logos">
+              <img src="/Admin-sign-in/logo.svg" alt="Library" />
+            </div>
+            <a class="link" href="#">Join Us</a>
+          </div>
+          <div class="section">
+            <div class="logos">
+              <img src="/Admin-sign-in/logo.svg" alt="Library" />
+            </div>
+            <a class="link" href="#">Contact</a>
+          </div>
+          <div class="section">
+            <div class="logos">
+              <img src="/Admin-sign-in/logo.svg" alt="Library" />
+            </div>
+            <a class="link" href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+      <div class="container-page-side">
+        <div class="admin-header">
+          <div class="admin-logo">
+            <img class="admin-img" src="/admin-panel/admin.svg" alt="" />
+            <p class="">Admin</p>
+          </div>
+        </div>
+        <div class="admin-panel-body">
+          <div class="container-product">
+            <h4>Add book</h4>
+          </div>
+          <p>Search book</p>
+          <div class="search-tools">
+            <input class="search-input" type="text" />
+            <button class="search-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="26"
+                viewBox="0 0 19 26"
+                fill="none"
+              >
+                <path
+                  d="M7.8 17.0857C11.5555 17.0857 14.6 13.5843 14.6 9.26503C14.6 4.94578 11.5555 1.44434 7.8 1.44434C4.04446 1.44434 1 4.94578 1 9.26503C1 13.5843 4.04446 17.0857 7.8 17.0857Z"
+                  stroke="#F2F2F2"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.9999 24.5555L13.4666 18.5396"
+                  stroke="#F2F2F2"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="book-form">
+            <p>Book form</p>
+            <div class="form-place">
+              <div class="form-inp">
+                <label for="">Book Name</label>
+                <input type="text" />
+              </div>
+              <div class="form-inp">
+                <label for="">Author Name</label>
+                <input type="text" />
+              </div>
+              <div class="form-inp">
+                <label for="">Book Image Url</label>
+                <input type="text" />
+              </div>
+              <div class="form-inp">
+                <label for="">Description</label>
+                <textarea name="" id="" cols="30" rows="1"></textarea>
+              </div>
+              <div class="form-inp">
+                <label for="">Book Type</label>
+                <select name="" id="">
+                  <option value="-"></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <button class="add">Add</button>
+            </div>
+          </div>
+          <div class="about-store">
+            <p>About Store</p>
+            <div class="form-place">
+              <div class="form-inp">
+                <label for="">Book Name</label>
+                <input type="text" />
+              </div>
+              <div class="form-inp">
+                <label for="">Author Name</label>
+                <input type="text" />
+              </div>
+              <div class="form-inp">
+                <label for="">Description</label>
+                <textarea name="" id="" cols="30" rows="1"></textarea>
+              </div>
+              <button class="add">About info add</button>
+            </div>
+          </div>
+          <div class="join-panel">
+            <p>Join Us</p>
+            <div class="table-form">
+              <table>
+                <tbody>
+                  <thead>
+                    <tr>
+                      <td>#</td>
+                      <td>Full name</td>
+                      <td>Email Adress</td>
+                    </tr>
+                  </thead>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="books-section">
+            <p>Books</p>
+            <div class="table">
+              <table>
+                <tbody>
+                  <thead>
+                    <tr>
+                      <td>#</td>
+                      <td>Title</td>
+                      <td>Description</td>
+                      <td>Category</td>
+                      <td>Author</td>
+                    </tr>
+                  </thead>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="contact-table">
+            <p>Contact Us</p>
+            <div class="table">
+              <table>
+                <tbody>
+                  <thead>
+                    <tr>
+                      <td>#</td>
+                      <td>Full Name</td>
+                      <td>Adress</td>
+                      <td>Email Adress</td>
+                      <td>Phone Number</td>
+                    </tr>
+                  </thead>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
