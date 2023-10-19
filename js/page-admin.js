@@ -14,7 +14,7 @@ form.addEventListener("submit",function(e){
     h2.innerHTML="Sucsesful"    ;
     p.innerHTML="Welcome to admin panel"   
     div.classList.add("great_css");
-    window.location.href="./login.html"}
+    window.location.href="/admin-panel/admin-panel.html"}
  else{
     h2.innerHTML="Error"    ;
     p.innerHTML="please check form"   
