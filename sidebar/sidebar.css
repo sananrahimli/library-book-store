@@ -1,0 +1,45 @@
+@import url(/header&footer/logo.css);
+.logos {
+  margin-left: 10px;
+  display: flex;
+  width: 75px;
+  height: 55px;
+  flex-shrink: 0;
+}
+.library-logo {
+  margin-left: 35px;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+.sidebar {
+  margin-right: 30px;
+  height: initial;
+  background: #720418;
+  width: 270px;
+  margin: 75px, 35px, 0, 0;
+}
+.menu-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+}
+.link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.section{
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: fit-content;
+}
