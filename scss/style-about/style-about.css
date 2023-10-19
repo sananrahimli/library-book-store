@@ -34,7 +34,6 @@ body {
 
 .wrapper {
   z-index: 2;
-  background-color: #fff;
 }
 
 header {
@@ -167,9 +166,6 @@ footer {
   color: #fff;
   font-size: 18px;
   padding: 4rem 0 0;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
 }
 footer > .container > .flex {
