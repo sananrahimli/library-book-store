@@ -38,6 +38,32 @@ body {
 
 .wrapper {
     z-index: 2;
+    background-color: #fff;
+
+    .social_links {
+        margin-top: 14rem;
+        padding-bottom: 6.5rem;
+        h3 {
+            font-size: 1.5625rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        ul {
+            justify-content: center;
+            column-gap: 3.3rem;
+            li {
+                a {
+                    i {
+                        &::before {
+                            font-size: 5rem;
+                            color: $col1;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 

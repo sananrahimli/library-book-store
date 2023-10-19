@@ -34,6 +34,26 @@ body {
 
 .wrapper {
   z-index: 2;
+  background-color: #fff;
+}
+.wrapper .social_links {
+  margin-top: 14rem;
+  padding-bottom: 6.5rem;
+}
+.wrapper .social_links h3 {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.wrapper .social_links ul {
+  justify-content: center;
+  -moz-column-gap: 3.3rem;
+       column-gap: 3.3rem;
+}
+.wrapper .social_links ul li a i::before {
+  font-size: 5rem;
+  color: #391F00;
 }
 
 header {
@@ -271,4 +291,81 @@ section#blockTop .blockTop__books.active .book_2 {
 section#blockTop .blockTop__books.active .book_3 {
   left: 270px;
   opacity: 1;
+}
+
+section#main_catalog {
+  margin-top: 4rem;
+  margin-bottom: 8.5rem;
+}
+section#main_catalog h3 {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+section#main_catalog ul.catalog_list {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2.25rem;
+}
+section#main_catalog ul.catalog_list li {
+  width: calc(33.3% - 2.5rem);
+}
+section#main_catalog ul.catalog_list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0.625rem;
+  padding: 1.56rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #241400;
+  transition: all 1s;
+}
+section#main_catalog ul.catalog_list li a:hover {
+  top: -4px;
+  transition: all 1s;
+}
+
+section#main_aboutstore {
+  margin-bottom: 9rem;
+}
+section#main_aboutstore h3 {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+section#main_aboutstore .about_num {
+  justify-content: space-between;
+}
+section#main_aboutstore .about_num .num_item {
+  align-items: center;
+}
+section#main_aboutstore .about_num .num_item span.num {
+  font-size: 3.125rem;
+  font-weight: 900;
+  margin-right: 1.69rem;
+}
+section#main_aboutstore .about_num .num_item span.name {
+  font-size: 0.8125rem;
+}
+
+section#main_delivery h3 {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+section#main_delivery p.description {
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 196.187%;
+}
+section#main_delivery p.description a {
+  display: block;
+  color: #241400;
 }/*# sourceMappingURL=style-main.css.map */
