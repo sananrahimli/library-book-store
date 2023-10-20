@@ -8,5 +8,3 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 // End
 
-
-

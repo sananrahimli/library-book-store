@@ -34,7 +34,6 @@ body {
 
 .wrapper {
   z-index: 2;
-  background-color: #fff;
 }
 
 header {
@@ -51,8 +50,7 @@ header .logo a img {
   max-height: 100%;
 }
 header nav ul {
-  -moz-column-gap: 1.3125rem;
-       column-gap: 1.3125rem;
+  column-gap: 1.3125rem;
 }
 header nav ul li a {
   color: #241400;
@@ -168,17 +166,13 @@ footer {
   color: #fff;
   font-size: 18px;
   padding: 4rem 0 0;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
 }
 footer > .container > .flex {
   justify-content: space-between;
 }
 footer .footer__menu > .flex {
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
+  column-gap: 5rem;
 }
 footer .footer__menu > .flex .menu__item h4 {
   font-weight: 400;
