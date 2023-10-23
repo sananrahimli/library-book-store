@@ -12,6 +12,24 @@
   font-family: "Montserrat", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4a0c0c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #861414;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d01515;
+}
+
 a {
   color: #fff;
 }
@@ -33,7 +51,6 @@ body {
 
 .panel_v2 {
   width: calc(100vw - 6rem);
-  height: calc(100vh - 6rem);
   min-height: 800px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
