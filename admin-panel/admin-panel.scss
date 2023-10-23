@@ -49,7 +49,6 @@ body {
 }
 .panel_v2 {
   width: calc(100vw - 6rem);
-  min-height: 800px;
   background-color: rgba(#000, 0.3);
   border-radius: 2rem;
   overflow: hidden;
@@ -64,6 +63,7 @@ body {
       padding: 1.5rem 1.5rem 3rem;
       flex-direction: column;
       justify-content: space-between;
+      row-gap: 5rem;
 
       ul.navigation {
         flex-direction: column;
@@ -303,7 +303,7 @@ body {
         .newBooks {
           flex-wrap: wrap;
           column-gap: 3.2rem;
-          row-gap: 1%;
+          row-gap: 1.5rem;
           height: 100%;
           max-height: 600px;
           overflow-y: scroll;
@@ -328,6 +328,9 @@ body {
               padding-left: 0.5rem;
               margin-bottom: 0.3rem;
               font-size: 1rem;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
             }
             p.auther {
               font-size: 0.8rem;
