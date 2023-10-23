@@ -1,3 +1,55 @@
 @import '../style-all.scss';
 
 // Contacts seyfesinin scss
+
+section#contactPage {
+    padding-top: 7rem;
+    h1{
+        font-size: 2.25rem;
+        margin-bottom: 2.5rem;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input {
+            border: 1px solid #CECECE;
+            padding: 1.6rem 2.4rem;
+            color: #797667;
+            font-size: 1.4375rem;
+            width: 100%;
+            max-width: 36rem;
+            margin-bottom: 2rem;
+            font-family: Crimson Text;
+        }
+        textarea {
+            width: 100%;
+            border: 1px solid #CECECE;
+            padding: 1.6rem 2.4rem;
+            color: #797667;
+            font-size: 1.4375rem;
+            font-family: Crimson Text;
+            margin-bottom: 5rem;
+        }
+        button {
+            width: 100%;
+            max-width: 38rem;
+            background-color: $col2;
+            padding: 1rem 0;
+            color: #FFF;
+            text-align: center;
+            font-family: Crimson Text;
+            font-size: 1.875rem;
+            border: none;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    section#contactPage form input {
+        width: 100%;
+        max-width: 100%;
+    }
+}

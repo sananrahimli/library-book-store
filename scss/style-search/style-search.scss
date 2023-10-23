@@ -1,3 +1,107 @@
 @import '../style-all.scss';
 
 // Search seyfesinin scss
+
+section#searchPage {
+    padding-top: 7rem;
+    h1 {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .searchForm {
+        width: 27.0625rem;
+        margin-right: 2rem;
+        form {
+            width: 100%;
+            input {
+                width: 100%;
+                border-radius: 0.3125rem;
+                border: 1px solid #CECECE;
+                padding: 1.1rem 1.7rem;
+                color: #241400;
+                font-family: Crimson Text;
+                font-size: 1.4375rem;
+                margin-bottom: 2.7rem;
+            }
+            button {
+                background-color: $col2;
+                color: #fff;
+                font-size: 1.875rem;
+                padding: 0.75rem 0;
+                text-align: center;
+                width: 100%;
+                border-radius: 0.3125rem;
+                border: none;
+            }
+        }
+    }
+    .ajax_books {
+        width: calc(100% - 27rem);
+        .swiper-slide {
+            padding: 2rem;
+            .book_page {
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+                padding: 2rem 2rem;
+                .picture {
+                    width: 14rem;
+                    height: 20rem;
+                    margin-right: 1rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .swiper_content_text {
+                    width: calc(100% - 15rem);
+                    h2 {
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                    }
+                    p.auther {
+                        font-size: 1.125rem;
+                        margin-bottom: 1.4rem;
+                    }
+                    p.description {
+                        font-size: 0.875rem;
+                        line-height: 196.187%;
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-button-next {
+        right: -0.1rem;
+        &::after {
+            color: #000;
+        }
+    }
+    .swiper-button-prev {
+        left: -0.1rem;
+        &::after {
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    section#searchPage > .container > .flex {
+        flex-direction: column;
+    }
+    section#searchPage .searchForm, section#searchPage .ajax_books {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    section#searchPage .ajax_books .swiper-slide .book_page > .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    section#searchPage .ajax_books .swiper-slide .book_page .swiper_content_text {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}

@@ -6,13 +6,13 @@ const modalOver =modalWin.querySelector('.overlay')
 
 joinusBtn.addEventListener('click', (e)=>{
     e.preventDefault;
-    document.body.style.overflow = 'hidden';
-    modalWin.classList.add('modal-active')
+    document.body.classList.toggle('ovHid')
+    modalWin.classList.toggle('modal-active')
 })
 
 modalOver.addEventListener('click', ()=>{
 
-    document.body.style.overflow = 'initial';
+    document.body.classList.toggle('ovHid')
     modalWin.classList.remove('modal-active')
 })
 
@@ -27,3 +27,15 @@ document.querySelector('.wrapper').style.marginBottom = heightFooter + "px"
 // End
 
 
+
+
+// Burger menu
+const burgerBtn = document.querySelector('#burger');
+const mobileNavigation = document.querySelector('nav#headerMenu');
+const headerOpenMenu = document.querySelector('header')
+
+burgerBtn.addEventListener('click', ()=>{
+    burgerBtn.classList.toggle('active');
+    mobileNavigation.classList.toggle('open');
+    headerOpenMenu.classList.toggle('openMenu')
+})

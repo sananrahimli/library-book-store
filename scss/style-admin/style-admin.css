@@ -1,233 +1,14 @@
-@import url(../fonts/icon_style.css);
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
-* {
-  box-sizing: border-box;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  outline: 0;
-  z-index: 1;
-}
-
-input {
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container {
-  width: 100%;
-  max-width: 1240px;
-  display: block;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.flex {
-  display: flex;
-}
-
-.wrapper {
-  z-index: 2;
-  background-color: #fff;
-}
-.wrapper .social_links {
-  margin-top: 14rem;
-  padding-bottom: 6.5rem;
-}
-.wrapper .social_links h3 {
-  font-size: 1.5625rem;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.wrapper .social_links ul {
-  justify-content: center;
-  -moz-column-gap: 3.3rem;
-       column-gap: 3.3rem;
-}
-.wrapper .social_links ul li a i::before {
-  font-size: 5rem;
-  color: #391F00;
-}
-
-header {
-  padding: 15px 0;
-}
-header .flex {
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo {
-  height: 2.625rem;
-}
-header .logo a img {
-  max-height: 100%;
-}
-header nav ul {
-  -moz-column-gap: 1.3125rem;
-       column-gap: 1.3125rem;
-}
-header nav ul li a {
-  color: #241400;
-  font-size: 0.8rem;
-}
-header nav ul li a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 0;
-  height: 1px;
-  background-color: #E16A00;
-  transition: all 0.8s;
-}
-header nav ul li a.active {
-  color: #E16A00;
-  font-weight: 700;
-}
-header nav ul li a.active::before {
-  width: 100%;
-}
-header nav ul li a:hover::before {
-  width: 100%;
-}
-header .joinus a {
-  color: #241400;
-}
-header .joinus a i {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-}
-header .joinus a span {
-  font-size: 0.9rem;
-}
-header .joinus a:hover {
-  color: #E16A00;
-}
-
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 1s;
-  z-index: 9;
-}
-.modal.modal-none {
-  transform: translateY(9999px);
-  visibility: hidden;
-  opacity: 0;
-}
-.modal.modal-active {
-  transform: translateY(0);
-  visibility: visible;
-  opacity: 1;
-}
-.modal .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.modal .modal-content {
-  background-color: #fff;
-  width: 100%;
-  max-width: 675px;
-  padding: 70px 55px 35px;
-  z-index: 2;
-}
-.modal .modal-content h2 {
-  text-align: center;
-  font-size: 2.75rem;
-  margin-bottom: 1.5rem;
-}
-.modal .modal-content form {
-  width: 100%;
-}
-.modal .modal-content form label {
-  display: block;
-  margin-bottom: 1.1rem;
-}
-.modal .modal-content form label input {
-  width: 100%;
-  border: 1px solid #CECECE;
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem;
-}
-.modal .modal-content form label input:focus {
-  border-color: #E16A00;
-}
-.modal .modal-content form button {
-  margin-top: 3rem;
-  width: 100%;
-  background-color: #E16A00;
-  text-align: center;
-  padding: 1.5rem 0;
-  border: none;
-  font-size: 1.2rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-footer {
-  background-color: #391F00;
-  color: #fff;
-  font-size: 18px;
-  padding: 4rem 0 0;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-footer > .container > .flex {
-  justify-content: space-between;
-}
-footer .footer__menu > .flex {
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
-}
-footer .footer__menu > .flex .menu__item h4 {
-  font-weight: 400;
-  font-size: 18px;
-  margin-bottom: 0.5rem;
-}
-footer .footer__menu > .flex .menu__item ul li {
-  margin-bottom: 0.3rem;
-}
-footer .footer__menu > .flex .menu__item ul li a {
-  color: #fff;
-  font-size: 13px;
-}
-footer .footer__bottom {
-  padding: 3rem 0 1rem;
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 100;
-}
-
 body.adminLogin {
+  margin: 0;
+  padding: 0 15px;
   background-color: #720418;
 }
 body.adminLogin header {
-  padding: 2rem 2rem;
+  padding: 1rem;
 }
 body.adminLogin header .logo {
   width: 282.59px;
   height: 85.04px;
-  border: 1px;
 }
 body.adminLogin header .logo a img {
   max-height: 100%;
@@ -236,9 +17,11 @@ body.adminLogin main {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 118px);
 }
 body.adminLogin main #admin_join {
-  margin-top: 90px;
+  width: 100%;
+  max-width: 662px;
   background-color: rgb(255, 255, 255);
 }
 body.adminLogin main #admin_join h1 {
@@ -252,26 +35,22 @@ body.adminLogin main #admin_join h1 {
   margin-top: 30px;
 }
 body.adminLogin main #admin_join form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 3rem;
+  box-sizing: border-box;
 }
 body.adminLogin main #admin_join form input {
-  width: 500px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 15px;
   border: 1px solid #CECECE;
-  margin: 20px 50px 20px 50px;
   font-size: 1.1875rem;
-  font-weight: 400;
-  letter-spacing: 0em;
-  text-align: left;
+  margin-bottom: 2rem;
 }
 body.adminLogin main #admin_join form button {
-  width: 500px;
+  width: 100%;
   border: none;
   padding: 20px;
-  margin: 20px 50px 20px 50px;
+  margin-top: 3rem;
   border-radius: 3px;
   font-family: Crimson Text;
   font-size: 19px;
@@ -285,15 +64,19 @@ body.adminLogin main #admin_join form button {
   color: white;
 }
 body.adminLogin main #admin_join form .error_css {
-  width: 500px;
+  width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
   background-color: #e6c5e5;
   border-radius: 10px;
   font-family: Crimson Text;
   font-size: 19px;
   line-height: 25px;
   letter-spacing: 0em;
+  box-sizing: border-box;
+  margin: 1rem 0;
+}
+body.adminLogin main #admin_join form .error_css h2 {
+  margin: 0.5rem 0;
 }
 body.adminLogin main #admin_join form .great_css {
   width: 500px;

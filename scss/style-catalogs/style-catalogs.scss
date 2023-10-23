@@ -108,3 +108,15 @@
 
 
 }
+
+
+@media  (max-width: 768px) {
+    .all-bks nav.nav-all-books {
+        flex-wrap: wrap;
+        width: 100%;
+        h2 {
+            flex-basis: 100%;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

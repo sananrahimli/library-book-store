@@ -30,6 +30,11 @@
                         <span>Join us</span>
                     </a>
                 </div>
+                <div class="mobile-burger">
+                    <button id="burger">
+                        <i></i><i></i><i></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -45,11 +50,65 @@
 
 
 
+<section id="searchPage">
+    <div class="container">
+        <h1>Search</h1>
+        <div class="flex">
+            <div class="searchForm">
+                <form action="">
+                    <input type="text" placeholder="Order in Chaos">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="ajax_books">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="book_page">
+                            <div class="flex">
+                                <div class="picture">
+                                    <img src="./images/home/book_3.svg" alt="">
+                                </div>
+                                <div class="swiper_content_text">
+                                    <h2>Order in Chaos</h2>
+                                    <p class="auther">Konstantin Koptelov</p>
+                                    <p class="description">
+                                        We work without holidays and weekends! Residents of Kiev can receive an order on the day of its registration. Customers from other cities of Ukraine can receive an order within 1-5 days, depending on the location of the settlement and the selected delivery method. Orders over UAH 1000 are delivered  free of charge *. You can see the available methods, exact terms and cost of delivery during checkout in the order basket, after selecting the delivery city     
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
 
 
+<div class="social_links">
+    <h3>Follow us on social media</h3>
+    <ul class="flex">
+        <li><a href=""><i class="icon-fb"></i></a></li>
+        <li><a href=""><i class="icon-tw"></i></a></li>
+        <li><a href=""><i class="icon-ins"></i></a></li>
+    </ul>
+   </div>
 
     
 </div>
@@ -132,7 +191,20 @@
             </div>
         <div class="overlay"></div>
     </div>
-   
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
    
 <script src="./js/all-script.js" defer></script>
 <script src="./js/page-search.js" defer></script>

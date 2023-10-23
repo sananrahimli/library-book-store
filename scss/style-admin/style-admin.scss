@@ -1,15 +1,15 @@
-@import '../style-all.scss';
+
 
 body.adminLogin {
-
-    background-color: $col3;
+    margin: 0;
+    padding: 0 15px;
+    background-color: #720418;
 
     header {
-        padding: 2rem 2rem;
+        padding: 1rem;
         .logo {
             width: 282.59px;
-            height: 85.04px;;
-            border: 1px;
+            height: 85.04px;
 
             a img {
                 max-height: 100%;
@@ -22,10 +22,11 @@ body.adminLogin {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: calc(100vh - 118px);
 
         #admin_join {
-            margin-top: 90px;
-            //      width: 662px;
+            width: 100%;
+            max-width: 662px;
             background-color: rgb(255, 255, 255);
 
             h1 {
@@ -42,27 +43,23 @@ body.adminLogin {
             }
 
             form {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                padding: 0 3rem;
+                box-sizing: border-box;
 
                 input {
-                    width: 500px;
+                    width: 100%;
+                    box-sizing: border-box;
                     padding: 15px;
                     border: 1px solid #CECECE;
-                    margin: 20px 50px 20px 50px;
                     font-size: 1.1875rem;
-                    font-weight: 400;
-                    letter-spacing: 0em;
-                    text-align: left;
+                    margin-bottom: 2rem;
                 }
 
                 button {
-                    width: 500px;
+                    width: 100%;
                     border: none;
                     padding: 20px;
-                    margin: 20px 50px 20px 50px;
+                    margin-top: 3rem;
                     border-radius: 3px;
                     font-family: Crimson Text;
                     font-size: 19px;
@@ -78,17 +75,19 @@ body.adminLogin {
 
 
                 .error_css {
-                    width: 500px;
-                    //  height: 80px;
+                    width: 100%;
                     padding: 10px;
-                    margin-bottom: 10px;
                     background-color: #e6c5e5;
                     border-radius: 10px;
                     font-family: Crimson Text;
                     font-size: 19px;
                     line-height: 25px;
                     letter-spacing: 0em;
-
+                    box-sizing: border-box;
+                    margin: 1rem 0;
+                    h2 {
+                        margin: 0.5rem 0;
+                    }
                 }
 
                 .great_css {

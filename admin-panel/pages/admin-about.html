@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adminpanel v2</title>
+  <link rel="stylesheet" href="../admin-panel.css">
+</head>
+<body>
+  <div class="panel_v2">
+
+
+
+    <div class="flex" id="esas">
+      <div id="sidebar" class="flex">
+        <div class="logo">
+          <img src="../../images/logo-admin.svg" alt="">
+        </div>
+        <ul class="navigation flex">
+            <li ><a href="/admin-panel/admin-panel.html"><span class="icon-home-com"></span> Ana səyfə</a></li>
+            <li><a href="/admin-panel/pages/admin-books.html" id="sidebarBooks"><span class="icon-book-com-2"></span> Kitablar</a></li>
+            <li><a href="/admin-panel/pages/admin-category.html" id="sidebarCategory"><span class="icon-books-com"></span> Kateqoriyalar</a></li>
+            <li class="active"><a href="/admin-panel/pages/admin-about.html" id="sidebarAbout"><span class="icon-info-com"></span> Bizim haqqda</a></li>
+            <li><a href="/admin-panel/pages/admin-users.html" id="sidebarUsers"><span class="icon-user-group-com"></span> İstifadəçilər</a></li>
+            <li><a href="/admin-panel/pages/admin-feedback.html" id="sidebarContacts"><span class="icon-phone-com"></span> Əlaqə</a></li>
+            <li><a href="/admin-panel/pages/admin-setting.html" id="sidebarSetting"><span class="icon-gear-com"></span> Ayarlar</a></li>
+          </ul>
+          <div class="mobMenu">
+            <button id="mobileBurger_btn">
+              <i></i><i></i><i></i>
+            </button>
+          </div>
+        <div class="logout">
+          <a href=""><span class="icon-door-open-com"></span> <span class="text">Çıxış</span></a>
+        </div>
+      </div>
+  
+  
+      <main>
+        
+          <header class="flex">
+            <nav>
+              <ul class="flex">
+                <li><a href="" class="active">Ana seyfe</a></li>
+                <li><a href="">Popular</a></li>
+                <li><a href="">Ən çox baxılanlar</a></li>
+                <li><a href="">Statistika</a></li>
+              </ul>
+            </nav>
+            <div class="search flex">
+              <form action="">
+                <input type="text" placeholder="Kitab adın yazın....">
+                <span class="icon-q-com"></span>
+              </form>
+            </div>
+            <div class="push">
+              <div class="push_icon">
+                <i class="icon-bell-com"></i>
+                <span>3</span>
+              </div>
+              <div class="push__content">
+                <div class="item">
+                   Yeni əlaqə məlumatlari saxlanilib
+                </div>
+              </div>
+            </div>
+          </header>
+
+
+          <div id="content">
+
+            <div id="adminPages">
+              <div class="flex pagesHeader">
+                  <h2 class="pages-Name">Bizim haqqda seyfesi</h2>
+              </div>
+                  <form action="" id="aboutForm" class="send">
+                      <label for="" class="inputStyle">
+                        <span>Səyfənin adı</span>
+                          <input type="text" id="namePage" placeholder="səyfə adı..." autocomplete="off">
+                      </label>
+                      <label for=""class="inputStyle">
+                        <span>Təsviri</span>
+                          <input type="text" id="descriptionPage" placeholder="təsvir..." autocomplete="off">
+                      </label>
+                      <label for=""class="inputStyle">
+                        <span>Şəkil ünvanı</span>
+                          <input type="password" id="urlPage"  autocomplete="off" placeholder="http://">
+                      </label>
+                      <input type="submit" value="Dəyişiklik et" class="submitBtn" >
+                  </form>
+
+          </div>
+
+          </div>
+
+      </main>
+    </div>
+
+
+  </div>
+
+
+
+  <script src="../admin-panel-ui.js" defer type="module"></script>
+  <script src="../js/about-page.js" defer type="module"></script>
+  <link rel="stylesheet" href="./pages.css">
+  
+</body>
+</html>

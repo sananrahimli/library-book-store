@@ -1,215 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/header&footer/logo.css" />
-    <link rel="stylesheet" href="/sidebar/sidebar.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/admin-panel/admin-panel.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geo&family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <title>Admin Panel</title>
-  </head>
-  <body>
-    <div class="container-main">
-      <div class="sidebar">
-        <div class="library-logo">
-          <div class="logo">
-            <img src="/Admin-sign-in/logo.svg" alt="Library" />
-          </div>
-          <div class="logo-side">
-            <h3 class="library">
-              Library
-              <hr />
-            </h3>
-            <p class="admin">Admin Panel</p>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>adminpanel v2</title>
+  <link rel="stylesheet" href="./admin-panel.css">
+</head>
+<body>
+  <div class="panel_v2">
+
+
+
+    <div class="flex" id="esas">
+      <div id="sidebar" class="flex">
+        <div class="logo">
+          <img src="../images/logo-admin.svg" alt="">
         </div>
-        <div class="menu-slider">
-          <div class="section">
-            <div class="logos">
-              <img src="/Admin-sign-in/logo.svg" alt="Library" />
-            </div>
-            <a class="link" href="#">Home</a>
-          </div>
-          <div class="section">
-            <div class="logos">
-              <img src="/Admin-sign-in/logo.svg" alt="Library" />
-            </div>
-            <a class="link" href="#">Books</a>
-          </div>
-          <div class="section">
-            <div class="logos">
-              <img src="/Admin-sign-in/logo.svg" alt="Library" />
-            </div>
-            <a class="link" href="#">About</a>
-          </div>
-          <div class="section">
-            <div class="logos">
-              <img src="/Admin-sign-in/logo.svg" alt="Library" />
-            </div>
-            <a class="link" href="#">Join Us</a>
-          </div>
-          <div class="section">
-            <div class="logos">
-              <img src="/Admin-sign-in/logo.svg" alt="Library" />
-            </div>
-            <a class="link" href="#">Contact</a>
-          </div>
-          <div class="section">
-            <div class="logos">
-              <img src="/Admin-sign-in/logo.svg" alt="Library" />
-            </div>
-            <a class="link" href="#">Logout</a>
-          </div>
+        <ul class="navigation flex">
+          <li class="active"><a href="/admin-panel/admin-panel.html"><span class="icon-home-com"></span> Ana səyfə</a></li>
+          <li><a href="/admin-panel/pages/admin-books.html" id="sidebarBooks"><span class="icon-book-com-2"></span> Kitablar</a></li>
+          <li><a href="/admin-panel/pages/admin-category.html" id="sidebarCategory"><span class="icon-books-com"></span> Kateqoriyalar</a></li>
+          <li><a href="/admin-panel/pages/admin-about.html" id="sidebarAbout"><span class="icon-info-com"></span> Bizim haqqda</a></li>
+          <li><a href="/admin-panel/pages/admin-users.html" id="sidebarUsers"><span class="icon-user-group-com"></span> İstifadəçilər</a></li>
+          <li><a href="/admin-panel/pages/admin-feedback.html" id="sidebarContacts"><span class="icon-phone-com"></span> Əlaqə</a></li>
+          <li><a href="/admin-panel/pages/admin-setting.html" id="sidebarSetting"><span class="icon-gear-com"></span> Ayarlar</a></li>
+        </ul>
+        <div class="mobMenu">
+          <button id="mobileBurger_btn">
+            <i></i><i></i><i></i>
+          </button>
+        </div>
+        <div class="logout">
+          <a href=""><span class="icon-door-open-com"></span> <span class="text">Çıxış</span></a>
         </div>
       </div>
-      <div class="container-page-side">
-        <div class="admin-header">
-          <div class="admin-logo">
-            <img class="admin-img" src="/admin-panel/admin.svg" alt="" />
-            <p class="">Admin</p>
-          </div>
-        </div>
-        <div class="admin-panel-body">
-          <div class="container-product">
-            <h4>Add book</h4>
-          </div>
-          <p>Search book</p>
-          <div class="search-tools">
-            <input class="search-input" type="text" />
-            <button class="search-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="26"
-                viewBox="0 0 19 26"
-                fill="none"
-              >
-                <path
-                  d="M7.8 17.0857C11.5555 17.0857 14.6 13.5843 14.6 9.26503C14.6 4.94578 11.5555 1.44434 7.8 1.44434C4.04446 1.44434 1 4.94578 1 9.26503C1 13.5843 4.04446 17.0857 7.8 17.0857Z"
-                  stroke="#F2F2F2"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.9999 24.5555L13.4666 18.5396"
-                  stroke="#F2F2F2"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="book-form">
-            <p>Book form</p>
-            <div class="form-place">
-              <div class="form-inp">
-                <label for="">Book Name</label>
-                <input type="text" />
-              </div>
-              <div class="form-inp">
-                <label for="">Author Name</label>
-                <input type="text" />
-              </div>
-              <div class="form-inp">
-                <label for="">Book Image Url</label>
-                <input type="text" />
-              </div>
-              <div class="form-inp">
-                <label for="">Description</label>
-                <textarea name="" id="" cols="30" rows="1"></textarea>
-              </div>
-              <div class="form-inp">
-                <label for="">Book Type</label>
-                <select name="" id="">
-                  <option value="-"></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-              <button class="add">Add</button>
+  
+  
+      <main>
+        
+          <header class="flex">
+            <nav>
+              <ul class="flex">
+                <li><a href="" class="active">Ana seyfe</a></li>
+                <li><a href="">Popular</a></li>
+                <li><a href="">Ən çox baxılanlar</a></li>
+                <li><a href="">Statistika</a></li>
+              </ul>
+            </nav>
+            <div class="search flex">
+              <form action="">
+                <input type="text" placeholder="Kitab adın yazın....">
+                <span class="icon-q-com"></span>
+              </form>
             </div>
-          </div>
-          <div class="about-store">
-            <p>About Store</p>
-            <div class="form-place">
-              <div class="form-inp">
-                <label for="">Book Name</label>
-                <input type="text" />
+            <div class="push">
+              <div class="push_icon">
+                <i class="icon-bell-com"></i>
+                <span>3</span>
               </div>
-              <div class="form-inp">
-                <label for="">Author Name</label>
-                <input type="text" />
+              <div class="push__content">
+                <div class="item">
+                   Yeni əlaqə məlumatlari saxlanilib
+                </div>
               </div>
-              <div class="form-inp">
-                <label for="">Description</label>
-                <textarea name="" id="" cols="30" rows="1"></textarea>
+            </div>
+          </header>
+
+
+          <div id="content">
+
+
+            <div class="flex">
+
+
+              <div class="main_books">
+                <div id="kateqoriyalar">
+                  <h2>Kateqoriyalar</h2>
+                  <div class="kateqoriyalar__items flex">
+                    <a href="" class="item">
+                      <div class="picture"><img src="img/cat/cat-1.png" alt=""></div>
+                      <p class="name">Romanlar</p>
+                    </a>
+                    <a href="" class="item">
+                      <div class="picture"><img src="img/cat/cat-2.jpeg" alt=""></div>
+                      <p class="name">Fantastika</p>
+                    </a>
+                    <a href="" class="item">
+                      <div class="picture"><img src="img/cat/cat-3.jpg" alt=""></div>
+                      <p class="name">Macəralar</p>
+                    </a>
+                    <a href="" class="item">
+                      <div class="picture"><img src="img/cat/cat-4.jpeg" alt=""></div>
+                      <p class="name">Tarix</p>
+                    </a>
+                    <a href="" class="item">
+                      <div class="picture"><img src="img/cat/cat-5.jpeg" alt=""></div>
+                      <p class="name">Detektiv</p>
+                    </a>
+                    <a href="" class="item">
+                      <div class="picture"><img src="img/cat/cat-6.jpg" alt=""></div>
+                      <p class="name">Biznes</p>
+                    </a>
+                    <a href="" class="item">
+                      <div class="picture all">
+                        <span>Hamısı</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+    
+    
+                <div id="sonKitablar">
+                  <h2>Son əlavə edilən kitablar</h2>
+                  <div class="newBooks flex">
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-1.jpg" alt="">
+                      </div>
+                      <h3>Art və xaos</h3>
+                      <p class="auther">Qaraqan</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-2.jpg" alt="">
+                      </div>
+                      <h3>Evakuasiya</h3>
+                      <p class="auther">Qaraqan</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                    <a href="" class="item__book">
+                      <div class="picture">
+                        <img src="img/books/book-3.jpg" alt="">
+                      </div>
+                      <h3>Yol ayrıcında azıb qalanlar</h3>
+                      <p class="auther">Varis</p>
+                    </a>
+                  </div>
+                </div>
+
               </div>
-              <button class="add">About info add</button>
+
+              <div class="main_statistika">
+                <h2>Statistika</h2>
+                <div class="stat__base">
+                  <h5>Kitab sayi  <span class="icon-book-com-2"></span></h5>
+                  <div class="bar">
+                    <i class="default">
+                      <span>1000-dən</span>
+                    </i>
+                    <i class="active">
+                      <span>190</span>
+                      <i class="top"></i>
+                    </i>
+                  </div>
+                  <p class="desc">Cəmi bazada kitab sayı</p>
+                </div>
+                <div class="stat_view">
+                  <h5>Ən çox oxunan kitab</h5>
+                  <ul>
+                    <li>
+                      <i>1</i>
+                      <h4>Xaos</h4>
+                      <p class="auther">Qaraqa</p>
+                    </li>
+                    <li>
+                      <i>2</i>
+                      <h4>Evakuasiya</h4>
+                      <p class="auther">Qaraqa</p></li>
+                    <li>
+                      <i>3</i>
+                      <h4>Yol ayrıcında azıb qalanlar</h4>
+                      <p class="auther">Varis</p></li>
+                  </ul>
+                </div>
+                <a href="" class="all-stat">Bütün statistika</a>
+              </div>
+
+
+
+
+
             </div>
+
+
+
           </div>
-          <div class="join-panel">
-            <p>Join Us</p>
-            <div class="table-form">
-              <table>
-                <tbody>
-                  <thead>
-                    <tr>
-                      <td>#</td>
-                      <td>Full name</td>
-                      <td>Email Adress</td>
-                    </tr>
-                  </thead>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="books-section">
-            <p>Books</p>
-            <div class="table">
-              <table>
-                <tbody>
-                  <thead>
-                    <tr>
-                      <td>#</td>
-                      <td>Title</td>
-                      <td>Description</td>
-                      <td>Category</td>
-                      <td>Author</td>
-                    </tr>
-                  </thead>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="contact-table">
-            <p>Contact Us</p>
-            <div class="table">
-              <table>
-                <tbody>
-                  <thead>
-                    <tr>
-                      <td>#</td>
-                      <td>Full Name</td>
-                      <td>Adress</td>
-                      <td>Email Adress</td>
-                      <td>Phone Number</td>
-                    </tr>
-                  </thead>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      </main>
     </div>
-  </body>
+
+
+  </div>
+
+
+
+  <script src="admin-panel-ui.js" defer type="module"></script>
+  <script src="./js/index-page.js" defer type="module"></script>
+
+  
+</body>
 </html>

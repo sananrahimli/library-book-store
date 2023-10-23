@@ -19,6 +19,9 @@ body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
+body.ovHid {
+  overflow: hidden;
+}
 
 .container {
   width: 100%;
@@ -34,6 +37,26 @@ body {
 
 .wrapper {
   z-index: 2;
+  background-color: #fff;
+}
+.wrapper .social_links {
+  margin-top: 14rem;
+  padding-bottom: 6.5rem;
+}
+.wrapper .social_links h3 {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.wrapper .social_links ul {
+  justify-content: center;
+  -moz-column-gap: 3.3rem;
+       column-gap: 3.3rem;
+}
+.wrapper .social_links ul li a i::before {
+  font-size: 5rem;
+  color: #391F00;
 }
 
 header {
@@ -50,7 +73,8 @@ header .logo a img {
   max-height: 100%;
 }
 header nav ul {
-  column-gap: 1.3125rem;
+  -moz-column-gap: 1.3125rem;
+       column-gap: 1.3125rem;
 }
 header nav ul li a {
   color: #241400;
@@ -166,13 +190,17 @@ footer {
   color: #fff;
   font-size: 18px;
   padding: 4rem 0 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
 }
 footer > .container > .flex {
   justify-content: space-between;
 }
 footer .footer__menu > .flex {
-  column-gap: 5rem;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
 }
 footer .footer__menu > .flex .menu__item h4 {
   font-weight: 400;
@@ -191,4 +219,170 @@ footer .footer__bottom {
   text-align: center;
   font-size: 0.8rem;
   font-weight: 100;
+}
+
+.mobile-burger {
+  display: none;
+}
+
+@media (max-width: 776px) {
+  header .flex {
+    justify-content: flex-start;
+  }
+  .mobile-burger {
+    display: block;
+  }
+  .mobile-burger button {
+    width: 30px;
+    height: 23px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .mobile-burger button i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.5s;
+  }
+  .mobile-burger button i:nth-child(2) {
+    top: 9px;
+  }
+  .mobile-burger button i:nth-child(3) {
+    top: 18px;
+  }
+  .mobile-burger button.active i:nth-child(1) {
+    opacity: 0;
+  }
+  .mobile-burger button.active i:nth-child(2) {
+    transform: rotate(45deg);
+    top: 10px;
+    left: 0;
+  }
+  .mobile-burger button.active i:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 0;
+  }
+  header .joinus {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  header.openMenu {
+    position: fixed;
+  }
+  header.openMenu > .container {
+    position: static;
+  }
+  header.openMenu > .container > .flex {
+    position: static;
+  }
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+  }
+  nav#headerMenu {
+    position: fixed;
+    left: 0;
+    top: 72px;
+    z-index: 9;
+    background-color: #720418;
+    transform: translateY(-9999px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+  }
+  nav#headerMenu.open {
+    transform: translateY(0);
+    visibility: visible;
+    height: calc(100vh - 72px);
+    width: 100vw;
+    opacity: 1;
+    padding: 3rem;
+  }
+  nav#headerMenu.open ul {
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 2rem;
+  }
+  nav#headerMenu.open ul li a {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  footer {
+    padding: 2rem 0 0;
+  }
+  footer > .container > .flex {
+    flex-direction: column;
+  }
+  footer > .container > .flex .logo {
+    margin-bottom: 1rem;
+  }
+  footer .footer__menu > .flex {
+    flex-wrap: wrap;
+    row-gap: 1.4rem;
+  }
+  footer .footer__menu > .flex .menu__item {
+    width: 38%;
+  }
+  footer .footer__bottom {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 450px) {
+  .wrapper .social_links ul li a i::before {
+    font-size: 3rem;
+  }
+}
+section#aboutPage {
+  padding-top: 7rem;
+  padding-bottom: 20rem;
+}
+section#aboutPage .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+section#aboutPage .about_content {
+  width: 100%;
+  max-width: 42rem;
+}
+section#aboutPage .about_content h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.1rem;
+}
+section#aboutPage .about_content .description {
+  font-size: 1.125rem;
+  line-height: 196.187%;
+}
+section#aboutPage .about_picture {
+  padding-top: 8rem;
+  width: calc(100% - 48rem);
+}
+
+@media (max-width: 1100px) {
+  section#aboutPage {
+    padding-bottom: 2rem;
+  }
+  section#aboutPage .container {
+    overflow: hidden;
+  }
+}
+@media (max-width: 998px) {
+  section#aboutPage .flex {
+    flex-direction: column;
+  }
+  section#aboutPage .about_picture {
+    width: 100%;
+    text-align: center;
+  }
+  section#aboutPage .about_picture img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style-about.css.map */

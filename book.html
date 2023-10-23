@@ -20,7 +20,7 @@
             <ul class="flex">
               <li><a href="/index.html">Home</a></li>
               <li><a href="/catalog.html">Catalog</a></li>
-              <li><a href="/about.html" class="active">About Store</a></li>
+              <li><a href="/about.html">About Store</a></li>
               <li><a href="/contacts.html">Contact Us</a></li>
               <li><a href="/search.html">Search</a></li>
               <li><a href="/book.html">Book</a></li>
@@ -32,6 +32,12 @@
               <span>Join us</span>
             </a>
           </div>
+
+          <div class="mobile-burger">
+            <button id="burger">
+                <i></i><i></i><i></i>
+            </button>
+        </div>
         </div>
       </div>
     </header>
@@ -65,13 +71,16 @@
               <div class="inputsend">
                 <input type="text" placeholder="your anonim comment..." />
                 <button class="comment-send">
-                  <img src="./images/home/book_page_sendbtn.svg" alt="#" />
+                  <span class="icon-send"></span>
                 </button>
               </div>
 
               <div id="book_comments_api">
                 <div class="anonim-comment">
+                 <div class="flex date_and_auther">
                   <h2 class="anonim-person">anonim</h2>
+                  <span class="date">18:32 today</span>
+                 </div>
                   <p>
                     Woah, your project looks awesome! How long have you been
                     coding for? I’m still new, but think I want to dive into
@@ -91,19 +100,24 @@
 
             <div class="about__picture">
               <span class="new">New</span>
-              <img src="./images/home/bookPage.svg" alt="#" />
+              <img src="./images/book_page.png" alt="#" />
             </div>
           </div>
 
-          <section class="links">
-            <h2>Follow us on social media</h2>
+          
+          
 
-            <div class="links-items">
-              <a href="#"><img src="/images/.svg" alt="Facebook icon" /></a>
-              <a href="#"><img src="/images/.svg" alt="Twitter icon" /></a>
-              <a href="#"><img src="/images/.svg" alt="Instagram icon" /></a>
-            </div>
-          </section>
+
+    <div class="social_links">
+      <h3>Follow us on social media</h3>
+      <ul class="flex">
+          <li><a href=""><i class="icon-fb"></i></a></li>
+          <li><a href=""><i class="icon-tw"></i></a></li>
+          <li><a href=""><i class="icon-ins"></i></a></li>
+      </ul>
+     </div>
+
+
         </div>
       </div>
     </div>

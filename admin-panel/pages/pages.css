@@ -1,0 +1,272 @@
+#adminPages .pagesHeader {
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+#adminPages .pagesHeader a.addBtn {
+  color: #fff;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.4rem 1rem;
+}
+#adminPages .newBooks {
+  flex-wrap: wrap;
+  -moz-column-gap: 3.2rem;
+       column-gap: 3.2rem;
+  row-gap: 2rem;
+  height: 600px;
+  overflow-y: scroll;
+  padding-right: 15px;
+}
+#adminPages .newBooks a.item__book {
+  width: calc(25% - 2.5rem);
+  color: #fff;
+}
+#adminPages .newBooks a.item__book .picture {
+  height: 270px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+}
+#adminPages .newBooks a.item__book .picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#adminPages .newBooks a.item__book h3 {
+  padding-left: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+#adminPages .newBooks a.item__book p.auther {
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+  opacity: 0.8;
+}
+
+form.send {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label.inputStyle {
+  display: block;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+label.inputStyle span {
+  position: absolute;
+  left: 20px;
+  top: -10px;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #5E0E0D;
+  z-index: 5;
+  padding: 0 3px;
+}
+label.inputStyle input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem 0.8rem;
+  color: #fff;
+}
+label.inputStyle input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.4;
+}
+label.inputStyle input::placeholder {
+  color: #fff;
+  opacity: 0.4;
+}
+
+.submitBtn {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 4rem;
+  transition: all 0.5s;
+}
+.submitBtn:hover {
+  background: linear-gradient(to left, #ff416c, #ff4b2b);
+  transition: all 0.5s;
+  border: 1px solid rgb(255, 255, 255);
+}
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+
+.pass-tehlukesizliyi {
+  width: 100%;
+  color: #fff;
+  padding: 0 1rem;
+}
+.pass-tehlukesizliyi i.bar {
+  display: block;
+  margin-top: 0.5rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 7px;
+  border-radius: 10px;
+}
+.pass-tehlukesizliyi i.bar > i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 7px;
+  border-radius: 10px;
+  transition: all 1s;
+}
+.pass-tehlukesizliyi i.bar > i.good {
+  width: 100%;
+  background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(206, 161, 0) 50%, rgb(31, 188, 0) 100%);
+}
+.pass-tehlukesizliyi i.bar > i.normal {
+  background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(206, 161, 0) 100%);
+  width: 66%;
+}
+.pass-tehlukesizliyi i.bar > i.bad {
+  background: #ff0000;
+  width: 27%;
+}
+.pass-tehlukesizliyi i.bar > i > i {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 0.9rem;
+}
+
+.tableStyle {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.tableStyle thead td {
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.tableStyle tbody tr {
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+}
+.tableStyle tbody tr:nth-child(2n) {
+  background-color: #ccc;
+}
+.tableStyle tbody td {
+  padding: 10px;
+  color: #000;
+}
+.tableStyle tbody td a {
+  text-align: center;
+  display: block;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tableStyle tbody td a span {
+  font-size: 1.3rem;
+}
+.tableStyle tbody td button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.tableStyle tbody td button.yes {
+  background-color: rgba(64, 255, 0, 0.2);
+  color: #444;
+}
+.tableStyle tbody td button.no {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #444;
+}
+
+.categoryAdd_content {
+  display: none;
+}
+.categoryAdd_content h1 {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+.categoryAdd_content.active {
+  display: block;
+}
+
+.categoryPage {
+  display: none;
+}
+.categoryPage.active {
+  display: block;
+}
+.categoryPage > .flex {
+  gap: 4rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.categoryPage > .flex li {
+  width: 130px;
+}
+.categoryPage > .flex li:hover .picture a {
+  opacity: 1;
+}
+.categoryPage > .flex li .picture {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-bottom: 0.5rem;
+  border: 7px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 8px;
+}
+.categoryPage > .flex li .picture a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+.categoryPage > .flex li .info {
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+.categoryPage > .flex li .info .books {
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+
+.bookPage_all {
+  display: none;
+}
+.bookPage_all.active {
+  display: block;
+}/*# sourceMappingURL=pages.css.map */
