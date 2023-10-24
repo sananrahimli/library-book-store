@@ -64,7 +64,6 @@ body.adminLogin main #admin_join form button {
   color: white;
 }
 body.adminLogin main #admin_join form .error_css {
-  width: 100%;
   padding: 10px;
   background-color: #e6c5e5;
   border-radius: 10px;
@@ -79,13 +78,16 @@ body.adminLogin main #admin_join form .error_css h2 {
   margin: 0.5rem 0;
 }
 body.adminLogin main #admin_join form .great_css {
-  width: 500px;
   padding: 10px;
-  margin-bottom: 10px;
   background-color: #b4f89f;
   border-radius: 10px;
   font-family: Crimson Text;
-  font-size: 19px;
+  font-size: 15px;
   line-height: 25px;
   letter-spacing: 0em;
+  box-sizing: border-box;
+  margin: 1rem 0;
+}
+body.adminLogin main #admin_join form .great_css h2 {
+  margin: 0.5rem 0;
 }/*# sourceMappingURL=style-admin.css.map */

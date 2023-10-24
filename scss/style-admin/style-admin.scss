@@ -75,7 +75,7 @@ body.adminLogin {
 
 
                 .error_css {
-                    width: 100%;
+                 //   width: 100%;
                     padding: 10px;
                     background-color: #e6c5e5;
                     border-radius: 10px;
@@ -91,16 +91,19 @@ body.adminLogin {
                 }
 
                 .great_css {
-                    width: 500px;
-                    // height: 80px;
+   
                     padding: 10px;
-                    margin-bottom: 10px;
                     background-color: #b4f89f;
                     border-radius: 10px;
                     font-family: Crimson Text;
-                    font-size: 19px;
+                    font-size: 15px;
                     line-height: 25px;
                     letter-spacing: 0em;
+                    box-sizing: border-box;
+                    margin: 1rem 0;
+                    h2 {
+                        margin: 0.5rem 0;
+                    }
 
                 }
 
