@@ -17,6 +17,7 @@
           <img src="../../images/logo-admin.svg" alt="">
         </div>
         <ul class="navigation flex">
+
           <li ><a href="../admin-panel.html"><span class="icon-home-com"></span> Ana səyfə</a></li>
           <li class="active"><a href="./admin-books.html" id="sidebarBooks"><span class="icon-book-com-2"></span> Kitablar</a></li>
           <li><a href="./admin-category.html" id="sidebarCategory"><span class="icon-books-com"></span> Kateqoriyalar</a></li>
@@ -41,15 +42,15 @@
           <header class="flex">
             <nav>
               <ul class="flex">
-                <li><a href="" class="active">Ana seyfe</a></li>
-                <li><a href="">Popular</a></li>
+                <li><a href="" class="active">Ana səhifə</a></li>
+                <li><a href="">Populyar</a></li>
                 <li><a href="">Ən çox baxılanlar</a></li>
                 <li><a href="">Statistika</a></li>
               </ul>
             </nav>
             <div class="search flex">
               <form action="">
-                <input type="text" placeholder="Kitab adın yazın....">
+                <input type="text" placeholder="Kitab adın yazın...." id="search-book">
                 <span class="icon-q-com"></span>
               </form>
             </div>
@@ -77,24 +78,48 @@
             
             
                 <div class="categoryAdd_content addBook_content">
+                <div class="flex bookPageHeader">
                   <h1>Kitab əlavə et</h1>
-                <form action="" id="categoryAddForm" class="send">
+                  <div class="google_search">
+                    <input type="text" id="inputSearch_google" placeholder="Google bazada axtarış...">
+                    <div class="searchList">
+                      <ul>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <form action="" id="addBookForm" class="send">
                   <label for="" class="inputStyle">
                     <span>Adı</span>
-                      <input type="text" id="nameAdmin" placeholder="Kitabın adi" autocomplete="off">
+                      <input type="text" name="titleBook" placeholder="Kitabın adi" autocomplete="off">
+                  </label>
+                  <label for=""class="inputStyle">
+                    <span>Mezmun</span>
+                      <input type="text" name="descriptionBook" placeholder="Mezmun" autocomplete="off">
                   </label>
                   <label for=""class="inputStyle">
                     <span>Şəkil</span>
-                      <input type="text" id="passAdmin" placeholder="http://" autocomplete="off">
+                      <input type="text" name="imgBook" placeholder="http://" autocomplete="off">
                   </label>
                   <label for=""class="inputStyle">
                     <span>Müəllif</span>
-                      <input type="text" id="passAdmin" placeholder="Qaraqan" autocomplete="off">
+                      <input type="text" name="authorBook" placeholder="Müəllif" autocomplete="off">
                   </label>
                   <label for=""class="inputStyle">
-                    <span>İl</span>
-                      <input type="text" id="passAdmin" placeholder="2003" autocomplete="off">
+                    <span>Dərc edilmə tarixi</span>
+                      <input type="text" name="yearBook" placeholder="2003" autocomplete="off">
                   </label>
+              
+                    <span>Kateqoriyalar</span>
+                
+                     <select name="kateqoriyalarBook" id="kateqoriyalarBook" >
+
+
+                     </select>
+                     
+                  
+                  
                   <input type="submit" value="Əlavə et" class="submitBtn" >
               </form>
                 </div>
