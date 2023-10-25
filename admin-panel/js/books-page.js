@@ -158,3 +158,33 @@ booksAdd_btn.addEventListener('click', function (e) {
     addBook_content.classList.toggle('active')
     bookPage_all.classList.toggle('active')
 })
+
+
+
+
+// Butun kitablar
+
+let newBooksAll = document.querySelector('.newBooks')
+onValue(ref(db, 'kitablar/'), function(valueKateqoriyalar){
+    const butunKateqoriyalar = Object.entries(valueKateqoriyalar.val());
+    for(let [key, value] of butunKateqoriyalar) {
+
+
+
+
+        let bookAll = document.createElement('a');
+        bookAll.classList.add('item__book')
+        bookAll.innerHTML = `
+                          <div class="picture">
+                            <img src="${value.image}" alt="">
+                          </div>
+                          <h3>${value.name}</h3>
+                          <p class="auther">${value.author}</p>
+        `;
+        newBooksAll.appendChild(bookAll)
+
+
+
+
+    }
+  });

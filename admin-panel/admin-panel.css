@@ -123,8 +123,7 @@ body {
   z-index: 8;
 }
 #esas main header nav ul {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
 }
 #esas main header nav ul li a {
   font-size: 0.8rem;
@@ -164,9 +163,6 @@ body {
 }
 #esas main header .search form input:focus {
   border-color: #fff;
-}
-#esas main header .search form input::-moz-placeholder {
-  color: #fff;
 }
 #esas main header .search form input::placeholder {
   color: #fff;
@@ -240,8 +236,12 @@ body {
   color: #fff;
 }
 #esas main #kateqoriyalar .kateqoriyalar__items {
-  -moz-column-gap: 5%;
-       column-gap: 5%;
+  column-gap: 2rem;
+}
+#esas main #kateqoriyalar .kateqoriyalar__items .json {
+  column-gap: 5%;
+  width: 85%;
+  justify-content: space-between;
 }
 #esas main #kateqoriyalar .kateqoriyalar__items a.item {
   display: flex;
@@ -265,8 +265,7 @@ body {
 #esas main #kateqoriyalar .kateqoriyalar__items a.item .picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #esas main #kateqoriyalar .kateqoriyalar__items a.item .picture span {
   text-align: center;
@@ -290,8 +289,7 @@ body {
 }
 #esas main #sonKitablar .newBooks {
   flex-wrap: wrap;
-  -moz-column-gap: 3.2rem;
-       column-gap: 3.2rem;
+  column-gap: 3.2rem;
   row-gap: 1.5rem;
   height: 100%;
   max-height: 600px;
@@ -313,8 +311,7 @@ body {
 #esas main #sonKitablar .newBooks a.item__book .picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #esas main #sonKitablar .newBooks a.item__book h3 {
   padding-left: 0.5rem;
@@ -536,8 +533,7 @@ body {
     overflow-x: scroll;
   }
   #esas main #sonKitablar .newBooks {
-    -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-gap: 1.5rem;
     row-gap: 8%;
     justify-content: space-between;
   }

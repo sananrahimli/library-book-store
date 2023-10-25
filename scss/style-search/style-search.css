@@ -55,8 +55,7 @@ body.ovHid {
 }
 .wrapper .social_links ul {
   justify-content: center;
-  -moz-column-gap: 3.3rem;
-       column-gap: 3.3rem;
+  column-gap: 3.3rem;
 }
 .wrapper .social_links ul li a i::before {
   font-size: 5rem;
@@ -77,8 +76,7 @@ header .logo a img {
   max-height: 100%;
 }
 header nav ul {
-  -moz-column-gap: 1.3125rem;
-       column-gap: 1.3125rem;
+  column-gap: 1.3125rem;
 }
 header nav ul li a {
   color: #241400;
@@ -203,8 +201,7 @@ footer > .container > .flex {
   justify-content: space-between;
 }
 footer .footer__menu > .flex {
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
+  column-gap: 5rem;
 }
 footer .footer__menu > .flex .menu__item h4 {
   font-weight: 400;
@@ -398,8 +395,7 @@ section#searchPage .ajax_books .swiper-slide .book_page .picture {
 section#searchPage .ajax_books .swiper-slide .book_page .picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 section#searchPage .ajax_books .swiper-slide .book_page .swiper_content_text {
   width: calc(100% - 15rem);
