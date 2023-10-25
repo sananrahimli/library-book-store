@@ -1,3 +1,5 @@
+
+
 const push_btn = document.querySelector('.push_icon');
 push_btn.addEventListener('click', ()=>{
     document.querySelector('.push__content').classList.toggle('open')
@@ -14,4 +16,26 @@ burgerMenu_btn.addEventListener('click', function(e){
     document.body.classList.toggle('active');
 
    
+});
+
+function bad_auth() {
+    if(localStorage.getItem("adminSession") == "false") {
+        window.location.href = '/admin.html';
+    } 
+}
+
+
+bad_auth()
+
+
+const logout_btn = document.querySelector('.logout a');
+
+logout_btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    setTimeout(() => {
+
+        localStorage.setItem("adminSession", false);
+        window.location.href = "/admin.html"
+    }, 500)
 })
+

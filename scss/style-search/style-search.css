@@ -1,5 +1,9 @@
 @import url(../fonts/icon_style.css);
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+img {
+  max-width: 100%;
+}
+
 * {
   box-sizing: border-box;
   position: relative;
@@ -374,6 +378,7 @@ section#searchPage .searchForm form button {
   width: 100%;
   border-radius: 0.3125rem;
   border: none;
+  font-family: Crimson Text;
 }
 section#searchPage .ajax_books {
   width: calc(100% - 27rem);
