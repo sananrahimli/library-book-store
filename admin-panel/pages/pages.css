@@ -269,4 +269,83 @@ label.inputStyle input::placeholder {
 }
 .bookPage_all.active {
   display: block;
+}
+
+.bookPageHeader {
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.bookPageHeader .google_search input {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  padding: 5px 40px 5px 15px;
+  color: #fff;
+}
+.bookPageHeader .google_search input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.bookPageHeader .google_search input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.bookPageHeader .google_search input:focus {
+  border: 1px solid rgb(255, 255, 255);
+}
+.bookPageHeader .google_search .searchList {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background-color: #fff;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200%;
+  height: 300px;
+  display: none;
+  overflow: hidden;
+}
+.bookPageHeader .google_search .searchList ul {
+  height: 300px;
+  overflow-y: scroll;
+}
+.bookPageHeader .google_search .searchList ul li {
+  justify-content: start;
+  height: 100px;
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #000;
+}
+.bookPageHeader .google_search .searchList ul li .picture {
+  width: 30%;
+  height: 100%;
+}
+.bookPageHeader .google_search .searchList ul li .picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.bookPageHeader .google_search .searchList ul li .picture .name {
+  width: 45%;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+.bookPageHeader .google_search .searchList ul li .picture .option {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bookPageHeader .google_search .searchList ul li .picture .option button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: green;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 15px;
 }/*# sourceMappingURL=pages.css.map */
