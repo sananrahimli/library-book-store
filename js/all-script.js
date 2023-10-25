@@ -1,3 +1,5 @@
+localStorage.setItem("adminSession", false);
+
 // Istifadecinin qirish ucun modal pencere
 const joinusBtn = document.querySelector('#joinusBtn');
 const modalWin = document.querySelector('#modalWin');

@@ -9,6 +9,7 @@ div.append(h2) ;
 var p=document.createElement("p");
 div.append(p) ;
 
+
 form.addEventListener("submit",function(e){
     e.preventDefault();
     const input=e.target;
@@ -22,6 +23,7 @@ form.addEventListener("submit",function(e){
    h2.innerHTML="Sucsesful"    ;
    p.innerHTML="Welcome to admin panel"   ;
    div.classList.add("great_css");
+   localStorage.setItem("adminSession", true);
    setTimeout(delay,2000)
 
   }
@@ -29,20 +31,12 @@ form.addEventListener("submit",function(e){
     h2.innerHTML="Error"    ;
     p.innerHTML="please check form"   
     div.classList.add("error_css");
-
+    localStorage.setItem("adminSession", false);
     }
    })
 })
 
-function delay(){
-      
-   
-  
-   window.location.href="/admin-panel/admin-panel.html"}
-// onValue( ref(db,"adminLogin/"), function(x){
-//    const admin=x.val().login;
-//    console.log(admin);
-//    const pass=x.val().pass;
-//    console.log(pass);
-   
-//    })
+function delay(){  
+   window.location.href="/admin-panel/admin-panel.html"
+}
+
