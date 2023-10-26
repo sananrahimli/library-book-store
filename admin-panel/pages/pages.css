@@ -14,7 +14,8 @@
 }
 #adminPages .newBooks {
   flex-wrap: wrap;
-  column-gap: 3.2rem;
+  -moz-column-gap: 3.2rem;
+       column-gap: 3.2rem;
   row-gap: 2rem;
   height: 600px;
   overflow-y: scroll;
@@ -35,7 +36,8 @@
 #adminPages .newBooks a.item__book .picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #adminPages .newBooks a.item__book h3 {
   padding-left: 0.5rem;
@@ -77,6 +79,10 @@ label.inputStyle input {
   font-size: 1.2rem;
   padding: 0.8rem 1rem 0.8rem;
   color: #fff;
+}
+label.inputStyle input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.4;
 }
 label.inputStyle input::placeholder {
   color: #fff;
@@ -234,6 +240,12 @@ label.inputStyle input::placeholder {
   border: 7px solid #fff;
   box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 8px;
 }
+.categoryPage > .flex li .picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .categoryPage > .flex li .picture a {
   position: absolute;
   left: 0;
@@ -252,9 +264,12 @@ label.inputStyle input::placeholder {
   color: #fff;
   align-items: center;
   justify-content: space-between;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 .categoryPage > .flex li .info .books {
-  column-gap: 3px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
 }
 
 .bookPage_all {
@@ -276,6 +291,9 @@ label.inputStyle input::placeholder {
   font-size: 1.2rem;
   padding: 5px 40px 5px 15px;
   color: #fff;
+}
+.bookPageHeader .google_search input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 .bookPageHeader .google_search input::placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -313,7 +331,8 @@ label.inputStyle input::placeholder {
   height: 100%;
 }
 .bookPageHeader .google_search .searchList ul li .picture img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }

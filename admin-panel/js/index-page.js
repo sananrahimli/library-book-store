@@ -66,16 +66,17 @@ onValue(ref(db, 'kitablar/'), function(valueKateqoriyalar){
 
 
 //   Kitab sayi
-let barBooks = document.querySelector('.stat__base')
-let barBooks_active = barBooks.querySelector('i.active')
-let booksNum = [];
-onValue(ref(db, 'kitablar/'), function(valueKateqoriyalar){
-    const butunKateqoriyalar = valueKateqoriyalar.val();
-    for(let i in butunKateqoriyalar) {
-       booksNum.push(butunKateqoriyalar[i])
+let barBooks = document.querySelector('.stat__base');
+let barBooks_active = barBooks.querySelector('i.active');
+let numSay;
 
+onValue(ref(db, 'kitablar/'), function(valueKateqoriyalar) {
+    const butunKitabSayi = Object.keys(valueKateqoriyalar.val());
 
-    }
-  });
-console.log(booksNum.length + 'kitab sayi')
-  barBooks_active.style.width = booksNum.length;
+    numSay = butunKitabSayi.length;
+    console.log(numSay + ' Kitab sayi');
+
+    // Устанавливаем ширину элемента barBooks_active после получения numSay
+    barBooks_active.style.width = numSay + '%';
+    barBooks_active.querySelector('span').innerHTML = numSay;
+});

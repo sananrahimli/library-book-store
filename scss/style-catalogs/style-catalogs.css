@@ -55,7 +55,8 @@ body.ovHid {
 }
 .wrapper .social_links ul {
   justify-content: center;
-  column-gap: 3.3rem;
+  -moz-column-gap: 3.3rem;
+       column-gap: 3.3rem;
 }
 .wrapper .social_links ul li a i::before {
   font-size: 5rem;
@@ -76,7 +77,8 @@ header .logo a img {
   max-height: 100%;
 }
 header nav ul {
-  column-gap: 1.3125rem;
+  -moz-column-gap: 1.3125rem;
+       column-gap: 1.3125rem;
 }
 header nav ul li a {
   color: #241400;
@@ -201,7 +203,8 @@ footer > .container > .flex {
   justify-content: space-between;
 }
 footer .footer__menu > .flex {
-  column-gap: 5rem;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
 }
 footer .footer__menu > .flex .menu__item h4 {
   font-weight: 400;
@@ -355,7 +358,8 @@ footer .footer__bottom {
   flex-basis: 30%;
 }
 .all-bks nav.nav-all-books ul {
-  column-gap: 2.5rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 .all-bks nav.nav-all-books ul li a {
   color: #241400;
@@ -396,7 +400,8 @@ footer .footer__bottom {
 .all-bks .ourStyle_books .target-book .picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .all-bks .ourStyle_books .target-book h4.title {
   font-weight: 700;
@@ -410,7 +415,7 @@ footer .footer__bottom {
   font-weight: 400;
   margin-bottom: 1rem;
 }
-.all-bks .ourStyle_books .target-book button.btn {
+.all-bks .ourStyle_books .target-book a.btn {
   background-color: #E16A00;
   border: none;
   width: 100%;
@@ -421,6 +426,7 @@ footer .footer__bottom {
   font-weight: 900;
   font-size: 0.75rem;
   text-transform: uppercase;
+  text-align: center;
 }
 .all-bks .ourStyle_books.catalog_books {
   margin-top: 8rem;

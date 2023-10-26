@@ -244,6 +244,11 @@ label.inputStyle {
         margin-bottom: .5rem;
         border: 7px solid #fff;
         box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 8px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
         a {
           position: absolute;
           left: 0;
@@ -263,6 +268,7 @@ label.inputStyle {
         color: #fff;
         align-items: center;
         justify-content: space-between;
+        column-gap: 5px;
         .books {
           column-gap: 3px;
         }

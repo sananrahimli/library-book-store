@@ -123,7 +123,8 @@ body {
   z-index: 8;
 }
 #esas main header nav ul {
-  column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 #esas main header nav ul li a {
   font-size: 0.8rem;
@@ -163,6 +164,9 @@ body {
 }
 #esas main header .search form input:focus {
   border-color: #fff;
+}
+#esas main header .search form input::-moz-placeholder {
+  color: #fff;
 }
 #esas main header .search form input::placeholder {
   color: #fff;
@@ -236,10 +240,12 @@ body {
   color: #fff;
 }
 #esas main #kateqoriyalar .kateqoriyalar__items {
-  column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 #esas main #kateqoriyalar .kateqoriyalar__items .json {
-  column-gap: 5%;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
   width: 85%;
   justify-content: space-between;
 }
@@ -265,7 +271,8 @@ body {
 #esas main #kateqoriyalar .kateqoriyalar__items a.item .picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #esas main #kateqoriyalar .kateqoriyalar__items a.item .picture span {
   text-align: center;
@@ -289,7 +296,8 @@ body {
 }
 #esas main #sonKitablar .newBooks {
   flex-wrap: wrap;
-  column-gap: 3.2rem;
+  -moz-column-gap: 3.2rem;
+       column-gap: 3.2rem;
   row-gap: 1.5rem;
   height: 100%;
   max-height: 600px;
@@ -297,7 +305,7 @@ body {
 }
 #esas main #sonKitablar .newBooks a.item__book {
   width: calc(33% - 2rem);
-  height: 40%;
+  height: 50%;
   color: #fff;
 }
 #esas main #sonKitablar .newBooks a.item__book .picture {
@@ -311,7 +319,8 @@ body {
 #esas main #sonKitablar .newBooks a.item__book .picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #esas main #sonKitablar .newBooks a.item__book h3 {
   padding-left: 0.5rem;
@@ -325,6 +334,8 @@ body {
   font-size: 0.8rem;
   padding-left: 0.5rem;
   opacity: 0.8;
+  height: 19px;
+  overflow: hidden;
 }
 
 .main_books {
@@ -383,7 +394,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 35%;
+  width: 0;
   height: 5px;
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   border-radius: 25px;
@@ -533,7 +544,8 @@ body {
     overflow-x: scroll;
   }
   #esas main #sonKitablar .newBooks {
-    column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
     row-gap: 8%;
     justify-content: space-between;
   }

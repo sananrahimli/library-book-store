@@ -14,7 +14,13 @@ const author_book = document.querySelector('form#addBookForm [name="authorBook"]
 const book_year = document.querySelector('form#addBookForm [name="yearBook"]')
 const category = document.querySelector('form#addBookForm [name="kateqoriyalarBook"]')
 const descriptionBook = document.querySelector('form#addBookForm [name="descriptionBook"]')
+const addDate = document.querySelector('form#addBookForm [name="addDate"]')
 const elave_et_btn = document.querySelector('.submitBtn')
+
+
+let todayDate = new Date();
+
+addDate.value = todayDate.toISOString().split('T')[0];
 
 let search_content = document.querySelector('.searchList')
 let searchList = document.querySelector('.searchList ul')
@@ -99,6 +105,8 @@ formAddBig.addEventListener('submit', function (e) {
         description:  descriptionBook.value,
         author: author_book.value,
         kateqoriya: category.value,
+        year: book_year.value,
+        addDate: addDate.value
 
     }
 

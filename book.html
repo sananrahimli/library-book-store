@@ -49,58 +49,36 @@
       <div class="container">
         <div class="bookPage">
           <div class="bookPage_header">
-            <button class="back-btn">&lt; BACK</button>
+            <button class="back-btn" onclick="window.history.back();">&lt; BACK</button>
           </div>
 
           <div class="flex">
             <div class="about__textContent">
-              <span class="year">2017</span>
-              <h2>Order in Chaos</h2>
-              <h3>2 days ago added</h3>
-              <h4>Konstantin Koptelov</h4>
+              <span class="year"></span>
+              <h2></h2>
+              <h3></h3>
+              <h4></h4>
               <p>
-                s of Kiev can receive an order on the day of its registration.
-                Customers from other cities of Ukraine can receive an order
-                within 1-5 days, depending on the location of the settlement and
-                the selected delivery method. Orders over UAH 1000 are delivered
-                free of charge *. You can see the available methods, exact terms
-                and cost of delivery during checkout in the order basket, after
-                selecting the delivery city. More details
               </p>
 
               <div class="inputsend">
-                <input type="text" placeholder="your anonim comment..." />
-                <button class="comment-send">
+                <form action="" id="addCommentForm">
+
+                <input type="text" name="commentContent" placeholder="your anonim comment..." />
+                <button type="submit" class="comment-send">
                   <span class="icon-send"></span>
                 </button>
+                </form>
               </div>
 
               <div id="book_comments_api">
-                <div class="anonim-comment">
-                 <div class="flex date_and_auther">
-                  <h2 class="anonim-person">anonim</h2>
-                  <span class="date">18:32 today</span>
-                 </div>
-                  <p>
-                    Woah, your project looks awesome! How long have you been
-                    coding for? I’m still new, but think I want to dive into
-                    React as well soon. Perhaps you can give me an insight on
-                    where I can learn React? Thanks!
-                  </p>
-                </div>
-                <div class="anonim-comment">
-                  <h2 class="anonim-person">anonim</h2>
-                  <p>
-                    Woah, your project looks awesome! How long have you been
-                    coding for? I’m still new, but think I want to dive into
-                  </p>
-                </div>
+                
               </div>
             </div>
 
             <div class="about__picture">
               <span class="new">New</span>
-              <img src="./images/book_page.png" alt="#" />
+              <img src="" alt="#" />
             </div>
           </div>
 
@@ -195,6 +173,6 @@
     </div>
 
     <script src="./js/all-script.js" defer></script>
-    <script src="./js/page-about.js" defer></script>
+    <script src="./js/page-book.js" defer type="module"></script>
   </body>
 </html>

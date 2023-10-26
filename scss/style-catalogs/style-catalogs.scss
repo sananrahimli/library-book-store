@@ -81,7 +81,7 @@
                 font-weight: 400;
                 margin-bottom: 1rem;
             }
-            button.btn {
+            a.btn {
                 background-color: $col2;
                 border: none;
                 width: 100%;
@@ -92,6 +92,7 @@
                 font-weight: 900;
                 font-size: 0.75rem;
                 text-transform: uppercase;
+                text-align: center;
             }
         }
 
