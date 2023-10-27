@@ -55,7 +55,7 @@
                     <p class="description">
                         In our store you can find a book for every taste. A large assortment. Nice prices. Interesting stories.
                     </p>
-                    <a href="#">Go to catalog</a>
+                    <a href="./catalog.html">Go to catalog</a>
                 </div>
 
                 <div class="blockTop__books">
@@ -76,15 +76,15 @@
         <div class="container">
             <h3>Catalog</h3>
             <ul class="catalog_list flex">
-                <li><a href="">Books</a></li>
-                <li><a href="">Electronic books</a></li>
-                <li><a href="">Audiobooks</a></li>
-                <li><a href="">Toys, creativity</a></li>
-                <li><a href="">Book accessories</a></li>
-                <li><a href="">Notepads</a></li>
-                <li><a href="">Board games</a></li>
-                <li><a href="">Present</a></li>
-                <li><a href="">Stock</a></li>
+                <li><a href="./catalog.html">Books</a></li>
+                <li><a href="./catalog.html">Electronic books</a></li>
+                <li><a href="./catalog.html">Audiobooks</a></li>
+                <li><a href="./catalog.html">Toys, creativity</a></li>
+                <li><a href="./catalog.html">Book accessories</a></li>
+                <li><a href="./catalog.html">Notepads</a></li>
+                <li><a href="./catalog.html">Board games</a></li>
+                <li><a href="./catalog.html">Present</a></li>
+                <li><a href="./catalog.html">Stock</a></li>
             </ul>
         </div>
     </section>
@@ -193,18 +193,31 @@
 <!-- Modal pencere kodu -->
     <div class="modal modal-none" id="modalWin">
             <div class="modal-content">
+               <div class="joinUs_start">
                 <h2>Join Us</h2>
-                <form action="">
-                    <label for=""><input type="text" placeholder="Full name"></label>
-                    <label for=""><input type="text" placeholder="E-mail"></label>
+                    <form action="" id="signUpUser">
+                        <label for=""><input type="text" name="userLogin" placeholder="Full name"></label>
+                        <label for=""><input type="text" name="userEmail" placeholder="E-mail"></label>
 
-                    <button type="submit">Join</button>
-                </form>
+                        <input type="submit" value="Join">
+                    </form>
+               </div>
+               <div class="joinUs_finish" style="display: none;">
+                    <div class="avatar flex">
+                        <img src="./images/avatar.jpg" alt="">
+                    </div>
+                    <p class="name"><b>Name: </b> <span></span></p>
+                    <p class="email"><b>E-mail: </b> <span></span></p>
+                    <br>
+                    <a href="#" class="checkoutUser"><i class="icon-door-open-com"></i> Logout</a>
+               </div>
+
+
             </div>
         <div class="overlay"></div>
     </div>
 
-<script src="./js/all-script.js" defer></script>
+<script src="./js/all-script.js" defer type="module"></script>
 <script src="./js/main.js" defer></script>
 </body>
 </html>

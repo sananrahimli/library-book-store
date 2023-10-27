@@ -44,20 +44,20 @@ inputSearch_google.addEventListener('input', function (e) {
                 let dataBook = data.items[item];
                 let urlImage = data.items[item].volumeInfo.imageLinks;
 
-                if (urlImage && urlImage.smallThumbnail) {
+                if (urlImage && urlImage.thumbnail) {
                     let li = document.createElement('li');
                     li.classList.add('flex')
                     li.dataset.num = dataBook.id;
 
                     li.innerHTML = `
-                        <div class="picture"><img src=${urlImage.smallThumbnail}></div>
+                        <div class="picture"><img src=${urlImage.thumbnail}></div>
                         <div class="name">${dataBook.volumeInfo.title}</div>
                         <div class="option">
                         <button data-title="${dataBook.volumeInfo.title}"
                          data-description="${dataBook.volumeInfo.description}"
                           data-img="${urlImage.thumbnail}" 
                           data-year="${dataBook.volumeInfo.publishedDate}"
-                           data-author="${dataBook.volumeInfo.authors}" class="elaveet-btn">+</button>
+                           data-author="${dataBook.volumeInfo.authors}" class="elaveet-btn" title="Kitabı əlavə elə">+</button>
                            
                         </div>
                     `;
@@ -89,7 +89,7 @@ inputSearch_google.addEventListener('input', function (e) {
             }
         });
 
-        searchList.innerHTML = ''; // Очистка searchList после добавления новых элементов
+        searchList.innerHTML = ''; 
     } else {
         search_content.style.display = 'none'
 
@@ -106,7 +106,8 @@ formAddBig.addEventListener('submit', function (e) {
         author: author_book.value,
         kateqoriya: category.value,
         year: book_year.value,
-        addDate: addDate.value
+        addDate: addDate.value,
+        look: 0,
 
     }
 

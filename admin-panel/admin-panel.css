@@ -10,6 +10,7 @@
   outline: 0;
   z-index: 1;
   font-family: "Montserrat", sans-serif;
+  transition: all 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -53,8 +54,8 @@ body {
   width: calc(100vw - 6rem);
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
-  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.5s;
 }
 
 #esas {
@@ -78,6 +79,16 @@ body {
 #esas #sidebar ul.navigation li.active::before {
   opacity: 1;
   width: 5.2rem;
+}
+#esas #sidebar ul.navigation li.active::after {
+  content: "";
+  position: absolute;
+  left: -33px;
+  bottom: -21px;
+  border: 5px solid transparent;
+  border-right: 6px solid #000;
+  border-top: 6px solid #000;
+  opacity: 0.6;
 }
 #esas #sidebar ul.navigation li.active a {
   color: #fff;
@@ -207,13 +218,14 @@ body {
   right: -10px;
   top: 60px;
   border-radius: 1rem;
-  padding: 1.5rem;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   z-index: 7;
   width: 450px;
   border: 3px solid #ff416c;
   display: none;
+  overflow: hidden;
+  max-height: 150px;
 }
 #esas main header .push .push__content::before {
   content: "";
@@ -225,6 +237,36 @@ body {
 }
 #esas main header .push .push__content.open {
   display: block;
+}
+#esas main header .push .push__content ul#pushBase {
+  padding: 0.5rem;
+  height: 150px;
+  overflow-y: scroll;
+}
+#esas main header .push .push__content ul#pushBase li a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  margin-bottom: 1rem;
+  color: #000;
+}
+#esas main header .push .push__content ul#pushBase li a b {
+  color: #ff416c;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+#esas main header .push .push__content ul#pushBase li a span.cavab {
+  margin-left: auto;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1.1rem;
 }
 #esas main #content.load {
   color: #FFF;
@@ -287,6 +329,8 @@ body {
 }
 #esas main #sonKitablar {
   margin-top: 2rem;
+  transition: all 0.5s;
+  overflow: hidden;
 }
 #esas main #sonKitablar h2 {
   font-size: 1.5rem;
@@ -302,6 +346,7 @@ body {
   height: 100%;
   max-height: 600px;
   overflow-y: scroll;
+  transition: all 0.5s;
 }
 #esas main #sonKitablar .newBooks a.item__book {
   width: calc(33% - 2rem);
@@ -340,6 +385,7 @@ body {
 
 .main_books {
   width: 65%;
+  overflow: hidden;
 }
 
 .main_statistika {
@@ -402,7 +448,7 @@ body {
 }
 .main_statistika .stat__base .bar i.active span {
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: -20px;
   font-size: 1rem;
   font-weight: 900;
@@ -453,7 +499,7 @@ body {
 .main_statistika .stat_view ul li {
   display: block;
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   padding-left: 4rem;
   margin-bottom: 1rem;
 }
@@ -478,6 +524,9 @@ body {
 .main_statistika .stat_view ul li:first-child {
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   color: #fff;
+}
+.main_statistika .stat_view ul li:first-child i {
+  border: 1px solid #fff;
 }
 .main_statistika a.all-stat {
   background-color: rgba(0, 0, 0, 0.2);

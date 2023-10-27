@@ -120,16 +120,14 @@ var swiper = new Swiper(".all-books-slider", {
 
 // Kateqoriyala 
 
-let allCategory_block_show = document.querySelector('.nav-all-books ul')
+const allCategory_block_show = document.querySelector('#showAllKateqoriylar')
 
 onValue(ref(db, 'kateqoriya/'), function(valueAllKat){
   const valueAllKat_const = Object.entries(valueAllKat.val());
   for(let [key, value] of valueAllKat_const) {
     
-    let liCat = document.querySelector('li');
-    liCat.innerHTML = `
-      <a href="#" data-id="${key}" class="active"> ${value.name} </a>
-    `;
+    let liCat = document.createElement('li');
+    liCat.innerHTML = `<a href="#" data-id="${key}" class="active"> ${value.name} </a>`;
     allCategory_block_show.appendChild(liCat)
 
   }

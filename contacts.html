@@ -52,12 +52,12 @@
 <section id="contactPage">
     <div class="container">
         <h1>Contact Us </h1>
-        <form action="">
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Address">
-            <input type="text" placeholder="Phone">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Note"></textarea>
+        <form action="" id="contactsForm">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="text" name="phone" placeholder="Phone" required>
+            <textarea name="note" id="" cols="30" rows="10" placeholder="Note"></textarea>
             <button type="submit">Send</button>
         </form>
     </div>
@@ -157,7 +157,7 @@
         <div class="overlay"></div>
     </div>
     
-<script src="./js/all-script.js" defer></script>
-<script src="./js/page-contacts.js" defer></script>
+<script src="./js/all-script.js" defer type="module"></script>
+<script src="./js/page-contacts.js" defer type="module"></script>
 </body>
 </html>

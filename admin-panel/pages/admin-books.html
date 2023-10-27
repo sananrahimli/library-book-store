@@ -45,7 +45,7 @@
                 <li><a href="" class="active">Ana səhifə</a></li>
                 <li><a href="">Populyar</a></li>
                 <li><a href="">Ən çox baxılanlar</a></li>
-                <li><a href="">Statistika</a></li>
+                <li><a href="./admin-statistika.html">Statistika</a></li>
               </ul>
             </nav>
             <div class="search flex">
@@ -54,15 +54,15 @@
                 <span class="icon-q-com"></span>
               </form>
             </div>
-            <div class="push">
+          <div class="push">
               <div class="push_icon">
                 <i class="icon-bell-com"></i>
-                <span>3</span>
+                <span></span>
               </div>
               <div class="push__content">
-                <div class="item">
-                   Yeni əlaqə məlumatlari saxlanilib
-                </div>
+                
+                <ul id="pushBase"></ul>
+                
               </div>
             </div>
           </header>
@@ -114,14 +114,15 @@
                     <span>Dərc edilmə tarixi</span>
                       <input type="text" name="addDate" placeholder="2023" autocomplete="off">
                   </label>
-              
+                  
+                  <label for=""class="inputStyle">
                     <span>Kateqoriyalar</span>
                 
                      <select name="kateqoriyalarBook" id="kateqoriyalarBook" >
 
 
                      </select>
-                     
+                  </label>
                   
                   
                   <input type="submit" value="Əlavə et" class="submitBtn" >

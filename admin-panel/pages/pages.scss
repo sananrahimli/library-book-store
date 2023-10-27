@@ -74,7 +74,7 @@ label.inputStyle {
     z-index: 5;
     padding: 0 3px;
   }
-  input {
+  input, select {
     width: 100%;
     background: transparent;
     border: 1px solid #fff;
@@ -196,13 +196,19 @@ label.inputStyle {
         border: none;
         padding: 10px;
         border-radius: 5px;
-        &.yes {
+        &[data-option="true"] {
           background-color: rgba(64, 255, 0, 0.2);
           color: #444;
+          &::before {
+            content: 'Cavablandırılıb';
+          }
         }
-        &.no {
+        &[data-option="false"] {
           background-color: rgba(255, 0, 0, 0.2);
           color: #444;
+          &::before {
+            content: 'Cavablandırılmayıb';
+          }
         }
       }
     }
@@ -230,18 +236,21 @@ label.inputStyle {
     flex-wrap: wrap;
     width: 100%;
     li {
-      width: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       &:hover {
         .picture a {
           opacity: 1;
         }
       }
       .picture {
-        width: 100%;
+        width: 130px;
         height: 130px;
         overflow: hidden;
         border-radius: 100%;
         margin-bottom: .5rem;
+        background-color: #fff;
         border: 7px solid #fff;
         box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 8px;
         img {
@@ -319,40 +328,50 @@ label.inputStyle {
         height: 300px;
         overflow-y: scroll;
         li {
-          justify-content: start;
+          justify-content: flex-start;
           height: 100px;
           overflow: hidden;
           padding: 10px;
           margin-bottom: 15px;
-          border-bottom: 1px solid #000;
+          border-bottom: 1px solid #ccc;
           .picture {
-            width: 30%;
+            flex-basis: 90px;
+            min-width: 90px;
+            max-width: 90px;
             height: 100%;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin-right: 1rem;
             img {
-              object-fit: cover;
+              object-fit: contain;
               width: 100%;
               height: 100%;
             }
-            .name {
-              width: 45%;
-              font-size: 0.8rem;
+          }
+          .name {
+            flex-basis: 240px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: left;
+          }
+          .option {
+            flex-basis: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            button {
+              width: 30px;
+              height: 30px;
+              border: none;
+              background: linear-gradient(to right, #ff416c, #ff4b2b);
+              border-radius: 100%;
+              text-align: center;
+              font-size: 1.2rem;
               font-weight: 900;
-            }
-            .option {
-              width: 20%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              button {
-                width: 30px;
-                height: 30px;
-                border: none;
-                background-color: green;
-                text-align: center;
-                font-size: 1.2rem;
-                font-weight: 900;
-                line-height: 15px;
-              }
+              line-height: 15px;
+              color: #fff;
+              cursor: pointer;
             }
           }
         }

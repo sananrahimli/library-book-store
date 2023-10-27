@@ -1,0 +1,18 @@
+#pageStatik {
+    .main_statistika {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+        div[class*="stat_"] {
+            width: 31%;
+            height: auto;
+            margin: 0;
+            ul {
+                max-height: 400px;
+                overflow: hidden;
+            }
+        }
+    }
+}
