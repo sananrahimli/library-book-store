@@ -6,16 +6,16 @@ localStorage.setItem("adminSession", false);
 // Istifadecinin qirish ucun modal pencere
 const joinusBtn = document.querySelector('#joinusBtn');
 const modalWin = document.querySelector('#modalWin');
-const modalOver =modalWin.querySelector('.overlay')
+const modalOver = modalWin.querySelector('.overlay')
 
 
-joinusBtn.addEventListener('click', (e)=>{
+joinusBtn.addEventListener('click', (e) => {
     e.preventDefault;
     document.body.classList.toggle('ovHid')
     modalWin.classList.toggle('modal-active')
 })
 
-modalOver.addEventListener('click', ()=>{
+modalOver.addEventListener('click', () => {
 
     document.body.classList.toggle('ovHid')
     modalWin.classList.remove('modal-active')
@@ -39,7 +39,7 @@ const burgerBtn = document.querySelector('#burger');
 const mobileNavigation = document.querySelector('nav#headerMenu');
 const headerOpenMenu = document.querySelector('header')
 
-burgerBtn.addEventListener('click', ()=>{
+burgerBtn.addEventListener('click', () => {
     burgerBtn.classList.toggle('active');
     mobileNavigation.classList.toggle('open');
     headerOpenMenu.classList.toggle('openMenu')
@@ -55,7 +55,7 @@ burgerBtn.addEventListener('click', ()=>{
 
 let joinUsForm = document.querySelector('form#signUpUser');
 
-joinUsForm.addEventListener('submit', function(e){
+joinUsForm.addEventListener('submit', function (e) {
     e.preventDefault()
     let userLogin = e.target.userLogin.value;
     let userEmail = e.target.userEmail.value;
@@ -81,29 +81,26 @@ let joinUs_finish = document.querySelector('.joinUs_finish')
 
 
 
-joinUs_finish.querySelector('a.checkoutUser').addEventListener('click', function(e){
+joinUs_finish.querySelector('a.checkoutUser').addEventListener('click', function (e) {
     e.preventDefault()
     localStorage.setItem("userSession", "false");
-    setTimeout(()=>{
-            console.log('User sign up');
-            document.querySelector('.joinUs_start').style.display = 'block'
-            joinUs_finish.style.display = 'none'
+    setTimeout(() => {
+        document.querySelector('.joinUs_start').style.display = 'block'
+        joinUs_finish.style.display = 'none'
     }, 500)
 })
 function authoriz() {
     if (localStorage.getItem("userSession") == null) {
-        console.log('User sign up');
         document.querySelector('.joinUs_start').style.display = 'block'
         joinUs_finish.style.display = 'none'
     }
     if (localStorage.getItem("userSession") == "true") {
-        console.log('User sign up');
         document.querySelector('.joinUs_start').style.display = 'none'
         joinUs_finish.style.display = 'block';
-    
+
         var userLocalId = localStorage.getItem("userSessionId");
-    
-        onValue(ref(db, `userSite/${userLocalId}`), function(userLocalVal){
+
+        onValue(ref(db, `userSite/${userLocalId}`), function (userLocalVal) {
             let ulv = userLocalVal.val()
             joinUs_finish.querySelector('p.name > span').innerHTML = ulv.userLogin
             joinUs_finish.querySelector('p.email > span').innerHTML = ulv.userEmail

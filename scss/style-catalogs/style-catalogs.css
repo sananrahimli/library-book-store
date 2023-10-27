@@ -1,5 +1,5 @@
-@import url(../fonts/icon_style.css);
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+@import url("../../fonts/icon_style.css");
 img {
   max-width: 100%;
 }
@@ -177,7 +177,7 @@ header .joinus a:hover {
 .modal .modal-content form label input:focus {
   border-color: #E16A00;
 }
-.modal .modal-content form button {
+.modal .modal-content form input[type=submit] {
   margin-top: 3rem;
   width: 100%;
   background-color: #E16A00;
@@ -345,6 +345,33 @@ footer .footer__bottom {
     font-size: 3rem;
   }
 }
+.joinUs_finish .avatar {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.joinUs_finish .avatar img {
+  width: 135px;
+  height: 135;
+}
+.joinUs_finish p {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.joinUs_finish p span {
+  color: #999;
+}
+.joinUs_finish a {
+  margin-top: 3rem;
+  display: inline-block;
+  background-color: #E16A00;
+  border-radius: 2rem;
+  padding: 10px 10px;
+  color: #fff;
+}
+.joinUs_finish a span {
+  margin-right: 5px;
+}
+
 .all-bks {
   margin-top: 8.8rem;
 }

@@ -147,22 +147,34 @@
 
       <!-- Modal pencere kodu -->
       <div class="modal modal-none" id="modalWin">
+        <div class="modal-content">
+           <div class="joinUs_start">
+            <h2>Join Us</h2>
+                <form action="" id="signUpUser">
+                    <label for=""><input type="text" name="userLogin" placeholder="Full name"></label>
+                    <label for=""><input type="text" name="userEmail" placeholder="E-mail"></label>
 
-              <div class="modal-content">
-                  <h2>Join Us</h2>
-                  <form action="">
-                      <label for=""><input type="text" placeholder="Full name"></label>
-                      <label for=""><input type="text" placeholder="E-mail"></label>
+                    <input type="submit" value="Join">
+                </form>
+           </div>
+           <div class="joinUs_finish" style="display: none;">
+                <div class="avatar flex">
+                    <img src="./images/avatar.jpg" alt="">
+                </div>
+                <p class="name"><b>Name: </b> <span></span></p>
+                <p class="email"><b>E-mail: </b> <span></span></p>
+                <br>
+                <a href="#" class="checkoutUser"><i class="icon-door-open-com"></i> Logout</a>
+           </div>
 
-                      <button type="submit">Join</button>
-                  </form>
-              </div>
-          <div class="overlay"></div>
-      </div>
+
+        </div>
+    <div class="overlay"></div>
+</div>
 
 
 
-  <script src="./js/all-script.js" defer></script>
+  <script src="./js/all-script.js" defer type="module"></script>
   <script src="./js/page-about.js" defer type="module"></script>
   </body>
   </html>
