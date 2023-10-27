@@ -17,14 +17,14 @@
           <img src="../../images/logo-admin.svg" alt="">
         </div>
         <ul class="navigation flex">
-          <li ><a href="../admin-panel.html"><span class="icon-home-com"></span> Ana səyfə</a></li>
-          <li ><a href="./admin-books.html" id="sidebarBooks"><span class="icon-book-com-2"></span> Kitablar</a></li>
-          <li><a href="./admin-category.html" id="sidebarCategory"><span class="icon-books-com"></span> Kateqoriyalar</a></li>
-          <li class="active"><a href="./admin-about.html" id="sidebarAbout"><span class="icon-info-com"></span> Bizim haqqda</a></li>
-          <li><a href="./admin-users.html" id="sidebarUsers"><span class="icon-user-group-com"></span> İstifadəçilər</a></li>
-          <li><a href="./admin-feedback.html" id="sidebarContacts"><span class="icon-phone-com"></span> Əlaqə</a></li>
-          <li><a href="./admin-setting.html" id="sidebarSetting"><span class="icon-gear-com"></span> Ayarlar</a></li>
-        </ul>
+            <li ><a href="/admin-panel/admin-panel.html"><span class="icon-home-com"></span> Ana səyfə</a></li>
+            <li><a href="/admin-panel/pages/admin-books.html" id="sidebarBooks"><span class="icon-book-com-2"></span> Kitablar</a></li>
+            <li><a href="/admin-panel/pages/admin-category.html" id="sidebarCategory"><span class="icon-books-com"></span> Kateqoriyalar</a></li>
+            <li class="active"><a href="/admin-panel/pages/admin-about.html" id="sidebarAbout"><span class="icon-info-com"></span> Bizim haqqda</a></li>
+            <li><a href="/admin-panel/pages/admin-users.html" id="sidebarUsers"><span class="icon-user-group-com"></span> İstifadəçilər</a></li>
+            <li><a href="/admin-panel/pages/admin-feedback.html" id="sidebarContacts"><span class="icon-phone-com"></span> Əlaqə</a></li>
+            <li><a href="/admin-panel/pages/admin-setting.html" id="sidebarSetting"><span class="icon-gear-com"></span> Ayarlar</a></li>
+          </ul>
           <div class="mobMenu">
             <button id="mobileBurger_btn">
               <i></i><i></i><i></i>
@@ -42,8 +42,9 @@
             <nav>
               <ul class="flex">
                 <li><a href="" class="active">Ana seyfe</a></li>
-         
-                <li><a href="./admin-statistika.html">Statistika</a></li>
+                <li><a href="">Popular</a></li>
+                <li><a href="">Ən çox baxılanlar</a></li>
+                <li><a href="">Statistika</a></li>
               </ul>
             </nav>
             <div class="search flex">
@@ -52,15 +53,15 @@
                 <span class="icon-q-com"></span>
               </form>
             </div>
-          <div class="push">
+            <div class="push">
               <div class="push_icon">
                 <i class="icon-bell-com"></i>
-                <span></span>
+                <span>3</span>
               </div>
               <div class="push__content">
-                
-                <ul id="pushBase"></ul>
-                
+                <div class="item">
+                   Yeni əlaqə məlumatlari saxlanilib
+                </div>
               </div>
             </div>
           </header>
@@ -83,7 +84,7 @@
                       </label>
                       <label for=""class="inputStyle">
                         <span>Şəkil ünvanı</span>
-                          <input type="password" id="urlPage"  autocomplete="off" placeholder="http://">
+                          <input type="text" id="urlPage"  autocomplete="off" placeholder="http://">
                       </label>
                       <input type="submit" value="Dəyişiklik et" class="submitBtn" >
                   </form>
@@ -101,7 +102,7 @@
 
 
   <script src="../admin-panel-ui.js" defer type="module"></script>
-  <script src="../js/about-page.js" defer type="module"></script>
+  <script src="../js/index-page.js" defer type="module"></script>
   <link rel="stylesheet" href="./pages.css">
   
 </body>
