@@ -29,6 +29,7 @@ import {
   forumSubmitBtn.addEventListener("submit", (e) => {
     e.preventDefault();
     aboutPageChange(namePage.value, discriptionPage.value, urlPage.value);
+    alert('Məlumatlar dəyişildi!')
     clearInput();
   });
   //--------------- Son ---------------------------------

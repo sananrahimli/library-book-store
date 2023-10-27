@@ -20,10 +20,7 @@ onValue(ref(db, 'contactSite/'), function (feedback) {
             push_content.appendChild(liPush)
             numPush_number++
         }
-
-        // let trBlock = document.createElement('li')
-        // trBlock.innerHTML = ``
-        // table.appendChild(trBlock)        
+     
     }
     push_btn.querySelector('span').innerHTML = numPush_number
 

@@ -586,9 +586,9 @@ body {
       flex-wrap: wrap;
       nav {
         margin-bottom: 1rem;
-        width: 100%;
+        width: 55%;
         ul {
-          justify-content: space-between;
+          justify-content: flex-start;
         }
       }
     }
@@ -611,6 +611,7 @@ body {
   }
   #esas main header {
     justify-content: space-between;
+    align-items: center;
   }
   #esas main #kateqoriyalar .kateqoriyalar__items {
     overflow-x: scroll;
@@ -619,6 +620,10 @@ body {
     column-gap: 1.5rem;
     row-gap: 8%;
     justify-content: space-between;
+  }
+
+  #pageStatik .main_statistika div[class*=stat_] {
+    width: 100% !important;
   }
 }
 
@@ -710,7 +715,7 @@ body {
   #esas main {
     padding: 15px;
   }
-  #esas main header nav {margin-bottom: 1.5rem;}
+  #esas main header nav {width: 55%;}
   #esas main header nav ul li {
     text-align: center;
     font-size: .7rem;

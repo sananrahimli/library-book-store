@@ -42,21 +42,20 @@
             <nav>
               <ul class="flex">
                 <li><a href="" class="active">Ana seyfe</a></li>
-                <li><a href="">Popular</a></li>
-                <li><a href="">Ən çox baxılanlar</a></li>
-                <li><a href="">Statistika</a></li>
+         
+                <li><a href="./admin-statistika.html">Statistika</a></li>
               </ul>
             </nav>
             
             <div class="push">
               <div class="push_icon">
                 <i class="icon-bell-com"></i>
-                <span>3</span>
+                <span></span>
               </div>
               <div class="push__content">
-                <div class="item">
-                   Yeni əlaqə məlumatlari saxlanilib
-                </div>
+                
+                <ul id="pushBase"></ul>
+                
               </div>
             </div>
           </header>
@@ -71,15 +70,15 @@
                   <form action="" id="aboutForm" class="send">
                       <label for="" class="inputStyle">
                         <span>Səyfənin adı</span>
-                          <input type="text" id="namePage" placeholder="səyfə adı..." autocomplete="off">
+                          <input type="text" id="namePage" placeholder="səyfə adı..." autocomplete="off" required>
                       </label>
                       <label for=""class="inputStyle">
                         <span>Təsviri</span>
-                          <input type="text" id="descriptionPage" placeholder="təsvir..." autocomplete="off">
+                          <input type="text" id="descriptionPage" placeholder="təsvir..." autocomplete="off" required>
                       </label>
                       <label for=""class="inputStyle">
                         <span>Şəkil ünvanı</span>
-                          <input type="text" id="urlPage"  autocomplete="off" placeholder="http://">
+                          <input type="text" id="urlPage"  autocomplete="off" placeholder="http://" required>
                       </label>
                       <input type="submit" value="Dəyişiklik et" class="submitBtn" >
                   </form>
