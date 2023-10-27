@@ -1,5 +1,6 @@
 @import url("../../fonts/icon_style.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+@import url("../../fonts/icon_style.css");
 img {
   max-width: 100%;
 }
@@ -357,10 +358,15 @@ footer .footer__bottom {
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
+.joinUs_finish p span {
+  color: #999;
+}
 .joinUs_finish a {
+  margin-top: 3rem;
+  display: inline-block;
   background-color: #E16A00;
   border-radius: 2rem;
-  padding: 5px 10px;
+  padding: 10px 10px;
   color: #fff;
 }
 .joinUs_finish a span {

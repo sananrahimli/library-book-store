@@ -55,9 +55,9 @@
         <h1>Search</h1>
         <div class="flex">
             <div class="searchForm">
-                <form action="" id="formSearch">
-                    <input type="text" placeholder="Order in Chaos">
-                    <button type="submit">Search</button>
+                <form action="" id="search-form">
+                    <input type="text" placeholder="Order in Chaos" name="search-inp">
+                    <button type="submit" name="search-btn">Search</button>
                 </form>
             </div>
             <div class="ajax_books">
@@ -79,14 +79,6 @@
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      <div class="swiper-slide">Slide 4</div>
-                      <div class="swiper-slide">Slide 5</div>
-                      <div class="swiper-slide">Slide 6</div>
-                      <div class="swiper-slide">Slide 7</div>
-                      <div class="swiper-slide">Slide 8</div>
-                      <div class="swiper-slide">Slide 9</div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -179,18 +171,31 @@
 
 
 <!-- Modal pencere kodu -->
-    <div class="modal modal-none" id="modalWin">
-            <div class="modal-content">
-                <h2>Join Us</h2>
-                <form action="">
-                    <label for=""><input type="text" placeholder="Full name"></label>
-                    <label for=""><input type="text" placeholder="E-mail"></label>
+<div class="modal modal-none" id="modalWin">
+    <div class="modal-content">
+       <div class="joinUs_start">
+        <h2>Join Us</h2>
+            <form action="" id="signUpUser">
+                <label for=""><input type="text" name="userLogin" placeholder="Full name"></label>
+                <label for=""><input type="text" name="userEmail" placeholder="E-mail"></label>
 
-                    <button type="submit">Join</button>
-                </form>
+                <input type="submit" value="Join">
+            </form>
+       </div>
+       <div class="joinUs_finish" style="display: none;">
+            <div class="avatar flex">
+                <img src="./images/avatar.jpg" alt="">
             </div>
-        <div class="overlay"></div>
+            <p class="name"><b>Name: </b> <span></span></p>
+            <p class="email"><b>E-mail: </b> <span></span></p>
+            <br>
+            <a href="#" class="checkoutUser"><i class="icon-door-open-com"></i> Logout</a>
+       </div>
+
+
     </div>
+<div class="overlay"></div>
+</div>
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -207,6 +212,6 @@
     </script>
    
 <script src="./js/all-script.js" defer type="module"></script>
-<script src="./js/page-search.js" defer></script>
+<script src="./js/page-search.js" defer type="module"></script>
 </body>
 </html>

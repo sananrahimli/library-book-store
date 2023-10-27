@@ -1,5 +1,5 @@
-import { ref, set, onValue, get, push  } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
-import { db } from './firebase.js'; 
+import { ref, set, onValue, get, push } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+import { db } from './firebase.js';
 
 let bookId;
 
@@ -10,31 +10,31 @@ var urlFragments = currentURL.split('#');
 
 // Проверить, есть ли фрагмент после '#'
 if (urlFragments.length > 1) {
-    // Фрагмент находится во втором элементе массива
-    var fragment = urlFragments[1];
+  // Фрагмент находится во втором элементе массива
+  var fragment = urlFragments[1];
 
-    // Присвоить фрагмент переменной
-    bookId = fragment;
+  // Присвоить фрагмент переменной
+  bookId = fragment;
 }
 let lookGen;
-window.addEventListener('DOMContentLoaded', (e)=>{
-    function fetchData() {
-        return new Promise((resolve, reject) => {
-          onValue(ref(db, `kitablar/${bookId}/look`), function (lookValue) {
-            lookGen = lookValue.val();
-            resolve(lookGen);
-          });
-        });
-      }
-      
-      fetchData()
-        .then((lookGen) => {
-          
-          set(ref(db, `kitablar/${bookId}/look`), lookGen+=1)
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+window.addEventListener('DOMContentLoaded', (e) => {
+  function fetchData() {
+    return new Promise((resolve, reject) => {
+      onValue(ref(db, `kitablar/${bookId}/look`), function (lookValue) {
+        lookGen = lookValue.val();
+        resolve(lookGen);
+      });
+    });
+  }
+
+  fetchData()
+    .then((lookGen) => {
+
+      set(ref(db, `kitablar/${bookId}/look`), lookGen += 1)
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 })
 
 
@@ -53,18 +53,18 @@ let imageBook = document.querySelector('.about__picture > img')
 
 
 
-onValue(ref(db, `kitablar/${bookId}`), function(valueKateqoriyalar){
-    const infoBook = valueKateqoriyalar.val()
-    
-    nameBook.innerHTML = infoBook.name;
-    yearBook.innerHTML = infoBook.year;
-    authorBook.innerHTML = infoBook.author;
-    descriptionBook.innerHTML = infoBook.description;
-    nameBook.innerHTML = infoBook.name;
-    imageBook.src = infoBook.image;
-    addDate.innerHTML = infoBook.addDate
-    
-  });
+onValue(ref(db, `kitablar/${bookId}`), function (valueKateqoriyalar) {
+  const infoBook = valueKateqoriyalar.val()
+
+  nameBook.innerHTML = infoBook.name;
+  yearBook.innerHTML = infoBook.year;
+  authorBook.innerHTML = infoBook.author;
+  descriptionBook.innerHTML = infoBook.description;
+  nameBook.innerHTML = infoBook.name;
+  imageBook.src = infoBook.image;
+  addDate.innerHTML = infoBook.addDate
+
+});
 
 
 
@@ -72,30 +72,29 @@ onValue(ref(db, `kitablar/${bookId}`), function(valueKateqoriyalar){
 
 let addCommentForm = document.querySelector('#addCommentForm')
 
-addCommentForm.addEventListener('submit', function(e){
-    e.preventDefault()
-    console.log(e.target.commentContent.value)
+addCommentForm.addEventListener('submit', function (e) {
+  e.preventDefault()
 
-    let todayDate = new Date();
-    const date = todayDate.toLocaleDateString();
-    const time = todayDate.toLocaleTimeString();
-    let now = date + " " + time; // Объявление переменной происходит здесь
-    
-    const objectBookAdd = {
-        name: "Anonim",
-        comment: e.target.commentContent.value,
-        date: now, // Теперь можно использовать переменную now
-    };
-    
-    
-    const commentsRef = ref(db, `/kitablar/${bookId}/comments`); // Путь к комментариям внутри книги
-    const newCommentRef = push(commentsRef); // Генерируем уникальный ключ для комментария
-    set(newCommentRef, objectBookAdd);
+  let todayDate = new Date();
+  const date = todayDate.toLocaleDateString();
+  const time = todayDate.toLocaleTimeString();
+  let now = date + " " + time; // Объявление переменной происходит здесь
 
-    alert('Comment elave edildi!')
-    addCommentForm.reset()
-    book_comments_api.innerHTML = '';
-    showCommentAll()
+  const objectBookAdd = {
+    name: "Anonim",
+    comment: e.target.commentContent.value,
+    date: now, // Теперь можно использовать переменную now
+  };
+
+
+  const commentsRef = ref(db, `/kitablar/${bookId}/comments`); // Путь к комментариям внутри книги
+  const newCommentRef = push(commentsRef); // Генерируем уникальный ключ для комментария
+  set(newCommentRef, objectBookAdd);
+
+  alert('Comment elave edildi!')
+  addCommentForm.reset()
+  book_comments_api.innerHTML = '';
+  showCommentAll()
 })
 
 
@@ -103,11 +102,11 @@ addCommentForm.addEventListener('submit', function(e){
 // Show comments
 let book_comments_api = document.querySelector('#book_comments_api');
 function showCommentAll() {
-onValue(ref(db, `kitablar/${bookId}/comments`), function(valueKateqoriya){
+  onValue(ref(db, `kitablar/${bookId}/comments`), function (valueKateqoriya) {
     let x = Object.entries(valueKateqoriya.val())
-        for (let [key,value] of x) {
-                
-            let commentItem = `
+    for (let [key, value] of x) {
+
+      let commentItem = `
             <div class="flex date_and_auther">
                 <h2 class="anonim-person">${value.name}</h2>
                 <span class="date">${value.date}</span>
@@ -117,18 +116,18 @@ onValue(ref(db, `kitablar/${bookId}/comments`), function(valueKateqoriya){
             </p>
         `;
 
-        let commentItemDiv = document.createElement('div');
-        commentItemDiv.classList.add('anonim-comment');
-        commentItemDiv.innerHTML = commentItem;
+      let commentItemDiv = document.createElement('div');
+      commentItemDiv.classList.add('anonim-comment');
+      commentItemDiv.innerHTML = commentItem;
 
-        book_comments_api.appendChild(commentItemDiv);
+      book_comments_api.appendChild(commentItemDiv);
 
-                // let opt = document.createElement('option');
-                // opt.value = key;
-                // opt.innerHTML = value.name;
-                // kateqoriyalarBook.appendChild(opt)
-        }
-      });
+      // let opt = document.createElement('option');
+      // opt.value = key;
+      // opt.innerHTML = value.name;
+      // kateqoriyalarBook.appendChild(opt)
     }
+  });
+}
 
-    showCommentAll()
+showCommentAll()
