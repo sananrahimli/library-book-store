@@ -9,7 +9,7 @@ var currentURL = window.location.href;
 var urlFragments = currentURL.split('#');
 
 // Проверить, есть ли фрагмент после '#'
-if (urlFragments.length > 1) {
+if (urlFragments.length >= 0) {
   // Фрагмент находится во втором элементе массива
   var fragment = urlFragments[1];
 
@@ -56,11 +56,11 @@ let imageBook = document.querySelector('.about__picture > img')
 onValue(ref(db, `kitablar/${bookId}`), function (valueKateqoriyalar) {
   const infoBook = valueKateqoriyalar.val()
 
+
   nameBook.innerHTML = infoBook.name;
   yearBook.innerHTML = infoBook.year;
   authorBook.innerHTML = infoBook.author;
   descriptionBook.innerHTML = infoBook.description;
-  nameBook.innerHTML = infoBook.name;
   imageBook.src = infoBook.image;
   addDate.innerHTML = infoBook.addDate
 
@@ -103,8 +103,9 @@ addCommentForm.addEventListener('submit', function (e) {
 let book_comments_api = document.querySelector('#book_comments_api');
 function showCommentAll() {
   onValue(ref(db, `kitablar/${bookId}/comments`), function (valueKateqoriya) {
-    let x = Object.entries(valueKateqoriya.val())
+    let x = Object?.entries(valueKateqoriya.val())
     for (let [key, value] of x) {
+      
 
       let commentItem = `
             <div class="flex date_and_auther">
