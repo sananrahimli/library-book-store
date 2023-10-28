@@ -129,8 +129,9 @@ onValue(ref(db, 'kateqoriya/'), function (valueAllKat) {
     let liCat = document.createElement('li');
     liCat.innerHTML = `<a href="#" data-id="${key}" class="active"> ${value.name} </a>`;
     allCategory_block_show.appendChild(liCat)
-
+    
   }
+  
 
   const liCatAll = allCategory_block_show.querySelectorAll('li');
   for (let pp of liCatAll) {
@@ -142,6 +143,8 @@ onValue(ref(db, 'kateqoriya/'), function (valueAllKat) {
     })
   }
 })
+
+set(ref(db,'kateqoriya/NhrrfYSnuYrjW60yHoy/'),ref(db,'kateqoriya/'))
 
 
 function editCategory(catId) {

@@ -12,7 +12,7 @@ categoryAddForm.addEventListener('submit', function (e) {
   e.preventDefault()
   const input = e.target;
 
-  if (input.categoryName.value.length > 0) {
+  if (input.categoryName.value.length > 1) {
 
     const object = {
       name: input.categoryName.value,

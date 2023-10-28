@@ -3,42 +3,59 @@ import { db } from './firebase.js';
 
 
 
-const searcForm = document.querySelector('form#search-form')
+const searchForm = document.querySelector('form#search-form')
 const searchInp = document.querySelector('form#search-form [name="search-inp"]')
 const searchBtn = document.querySelector('form#search-form [name="search-btn"]')
 
-searchBtn.addEventListener('click', function (e) {
+searchForm.addEventListener('submit', function (e) {
     e.preventDefault()
     const valueInp = searchInp.value
     const swiperSlider = document.querySelector('.swiper-slide .book_page')
-    const swiperSliderPage = document.querySelector('.book_page .flex')
-
-
+    const mySwiper = document.querySelector('.swiper_search')
+    const ajaxBooks = document.querySelector('.ajax_books')
+    
+    
 
     onValue(ref(db, `kitablar/`), function (snapshot) {
         const data = Object.entries(snapshot.val())
+        
 
         for (let [key, value] of data) {
-            if (valueInp.includes(value.name)) {
-                swiperSliderPage.innerHTML = ''
-                swiperSlider.innerHTML = ''
+            const  result  = (value.name?.trim()?.toLowerCase()).startsWith(valueInp.trim().toLowerCase())
+             
+            
+            if (result) {
                 
-                swiperSliderPage.innerHTML += `
-                <div class="picture"><img src="${value.image}"></div>
-                <div class="swiper_content_text">
-                <h2>${value.name}</h2>
-                <p class="auther">${value.author}</p>
-                <p class="description">
-                    ${value.description}
-                </p>
+                mySwiper.innerHTML = `
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="book_page">
+                        <div class="flex">
+                            <div class="picture">
+                                <img src="${value.image}" alt="">
+                            </div>
+                            <div class="swiper_content_text">
+                                <h2>${value.name}</h2>
+                                <p class="auther">${value.author}</p>
+                                <p class="description">
+                                  ${value.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
                 `
-                swiperSlider.append(swiperSliderPage)
-
+                ajaxBooks.appendChild(mySwiper)
+                
             }
+           
            
         }
     })
+    searchInp.innerHTML = ''
+     
     
 })
-searchInp.innerHTML = ''
