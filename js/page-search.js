@@ -9,27 +9,39 @@ const searchInp = document.querySelector('form#search-form [name="search-inp"]')
 searchForm.addEventListener('submit', function (e) {
     e.preventDefault()
     const valueInp = searchInp.value
-    const swiperSlide = document.querySelector('.swiper-slide')
     const swiperWrapper = document.querySelector('.swiper-wrapper')
+    swiperWrapper.innerHTML = ''
 
 
 
     onValue(ref(db, `kitablar/`), function (snapshot) {
         const data = Object.entries(snapshot.val())
-        const regEx = new RegExp("^" + valueInp,"gi")
+        const regEx = new RegExp("^" + valueInp, "gi")
+        
 
         for (let [key, value] of data) {
             
-         
-                
+           
+            
+            let swiperSlide = document.createElement('div')
+            swiperSlide.classList.add('swiper-slide')
+            
+           
+
+
+
 
             if (regEx.test(value.name)) {
+                console.log(value.name)
                 
+               
+
+
 
                 swiperSlide.innerHTML = `
                 
                 
-                    <ul class="book_page">
+                    <div class="book_page">
                         <div class="flex">
                             <div class="picture">
                                 <img src="${value.image}" alt="">
@@ -42,21 +54,23 @@ searchForm.addEventListener('submit', function (e) {
                                 </p>
                             </div>
                         </div>
-                    </ul>
+                    </div>
                 
             
                 `
-                swiperWrapper.appendChild(swiperSlide)
-                
+                swiperWrapper.append(swiperSlide)
+
 
             }
             
 
 
+
         }
         
-        
+
     })
+    
     searchInp.value = ''
 
 

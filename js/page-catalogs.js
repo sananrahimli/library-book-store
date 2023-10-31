@@ -151,7 +151,7 @@ onValue(ref(db, 'kateqoriya/'), function (valueAllKat) {
 
 })
 
-// set(ref(db, 'kateqoriya/NhrrfYSnuYrjW60yHoy/'), ref(db, 'kateqoriya/'))
+
 
 
 function editCategory(catId) {
