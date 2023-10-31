@@ -32,7 +32,6 @@ searchForm.addEventListener('submit', function (e) {
 
 
             if (regEx.test(value.name)) {
-                console.log(value.name)
                 
                
 
