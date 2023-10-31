@@ -292,6 +292,7 @@ body {
       #kateqoriyalar {
         margin-top: 1.5rem;
         margin-bottom: 4rem;
+        
         h2 {
           font-size: 1rem;
           font-weight: 700;
@@ -299,9 +300,11 @@ body {
           color: #fff;
         }
         .kateqoriyalar__items {
+          
           column-gap: 2rem;
           .json {
-            column-gap: 3%;
+            overflow: hidden;
+            column-gap: 5%;
             width: 85%;
             justify-content: space-between;
           }
@@ -390,7 +393,7 @@ body {
               font-size: 0.8rem;
               padding-left: 0.5rem;
               opacity: 0.8;
-              height: 19px;
+              height: 18px;
               overflow: hidden;
             }
           }

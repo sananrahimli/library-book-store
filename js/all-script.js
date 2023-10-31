@@ -1,3 +1,7 @@
+import { ref, set, onValue, get, push } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+import { db } from './firebase.js';
+
+
 // Istifadecinin qirish ucun modal pencere
 const joinusBtn = document.querySelector('#joinusBtn');
 const modalWin = document.querySelector('#modalWin');
@@ -22,11 +26,24 @@ modalOver.addEventListener('click', ()=>{
 // Footer Fixed Effekti
 
 const heightFooter = document.querySelector('footer').offsetHeight;
+
 document.querySelector('.wrapper').style.marginBottom = heightFooter + "px"
 
 // End
-
-
+const kat = document.querySelector('.catalog_list')
+if(kat) {
+onValue(ref(db,'kateqoriya/'), function (snapshot) {
+    let data = Object.entries(snapshot.val())
+    for (let [key,value] of data) {
+        let li = document.createElement('li');
+        let a = document.createElement('a')
+        a.href = './catalog.html';
+        a.innerHTML = value.name;
+        li.appendChild(a);
+        kat.appendChild(li)
+    }
+})
+}
 
 
 // Burger menu

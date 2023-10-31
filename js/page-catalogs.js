@@ -124,14 +124,20 @@ const allCategory_block_show = document.querySelector('#showAllKateqoriylar')
 
 onValue(ref(db, 'kateqoriya/'), function (valueAllKat) {
   const valueAllKat_const = Object.entries(valueAllKat.val());
+  allCategory_block_show.innerHTML = ''
   for (let [key, value] of valueAllKat_const) {
 
     let liCat = document.createElement('li');
+   
+
+
     liCat.innerHTML = `<a href="#" data-id="${key}" class="active"> ${value.name} </a>`;
     allCategory_block_show.appendChild(liCat)
-    
+
+
   }
-  
+
+
 
   const liCatAll = allCategory_block_show.querySelectorAll('li');
   for (let pp of liCatAll) {
@@ -142,9 +148,10 @@ onValue(ref(db, 'kateqoriya/'), function (valueAllKat) {
       editCategory(dataAtt);
     })
   }
+
 })
 
-set(ref(db,'kateqoriya/NhrrfYSnuYrjW60yHoy/'),ref(db,'kateqoriya/'))
+
 
 
 function editCategory(catId) {
