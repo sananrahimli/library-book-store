@@ -1,5 +1,5 @@
 import { ref, set, onValue, push } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
-import { db } from '../../js/firebase.js';
+import { db } from '../js/firebase.js';
 
 const push_btn = document.querySelector('.push_icon');
 const push_content = document.querySelector('#pushBase')
