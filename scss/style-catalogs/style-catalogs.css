@@ -65,6 +65,8 @@ body.ovHid {
 
 header {
   padding: 15px 0;
+  background-color: #fff;
+  z-index: 10;
 }
 header .flex {
   justify-content: space-between;
@@ -373,7 +375,7 @@ footer .footer__bottom {
 }
 
 .all-bks {
-  margin-top: 8.8rem;
+  padding-top: 8.8rem;
 }
 .all-bks nav.nav-all-books {
   align-items: center;
@@ -436,11 +438,15 @@ footer .footer__bottom {
   text-align: center;
   color: #241400;
   margin-bottom: 0.6rem;
+  height: 44px;
+  overflow: hidden;
 }
 .all-bks .ourStyle_books .target-book p.auther {
   font-size: 0.75rem;
   font-weight: 400;
   margin-bottom: 1rem;
+  height: 17px;
+  overflow: hidden;
 }
 .all-bks .ourStyle_books .target-book a.btn {
   background-color: #E16A00;

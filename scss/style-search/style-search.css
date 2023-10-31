@@ -65,6 +65,8 @@ body.ovHid {
 
 header {
   padding: 15px 0;
+  background-color: #fff;
+  z-index: 10;
 }
 header .flex {
   justify-content: space-between;

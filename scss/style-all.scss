@@ -75,6 +75,8 @@ body {
 
 header {
     padding: 15px 0;
+    background-color: #fff;
+    z-index: 10;
     .flex {
         justify-content: space-between;
         align-items: center;

@@ -50,6 +50,8 @@ let addDate = document.querySelector('.about__textContent h3')
 let descriptionBook = document.querySelector('.about__textContent > p')
 let imageBook = document.querySelector('.about__picture > img')
 
+let look_span = document.querySelector('span.new > span#look')
+
 
 
 
@@ -62,7 +64,9 @@ onValue(ref(db, `kitablar/${bookId}`), function (valueKateqoriyalar) {
   authorBook.innerHTML = infoBook.author;
   descriptionBook.innerHTML = infoBook.description;
   imageBook.src = infoBook.image;
-  addDate.innerHTML = infoBook.addDate
+  look_span.innerHTML = infoBook.look;
+  addDate.innerHTML = infoBook.addDate;
+
 
 });
 
@@ -102,8 +106,8 @@ addCommentForm.addEventListener('submit', function (e) {
 // Show comments
 let book_comments_api = document.querySelector('#book_comments_api');
 function showCommentAll() {
-  onValue(ref(db, `kitablar/${bookId}/comments`), function (valueKateqoriya) {
-    let x = Object?.entries(valueKateqoriya.val())
+  onValue(ref(db, `kitablar/${bookId}/comments`), function(valueKateqoriya) {
+    let x = Object.entries(valueKateqoriya.val())
     for (let [key, value] of x) {
       
 
